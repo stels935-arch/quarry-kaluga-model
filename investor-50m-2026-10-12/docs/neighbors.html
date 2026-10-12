@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Соседние карьеры: сравнение</title>
+<meta name="description" content="Сравнение бизнес-плана карьера «Зудна» с карьерами известняка и керамзитовыми заводами поблизости: отчётность ГИР БО, цены, спрос, стресс-тест.">
+<style>
+:root{
+  --bg:#f6f5f2; --surface:#ffffff; --surface-2:#fcfcfb; --line:#e3e1dc; --line-2:#cfccc5;
+  --text:#14130f; --text-2:#52514e; --muted:#7a7873;
+  --accent:#2a78d6; --accent-soft:#e8f1fc; --accent-ink:#174f94;
+  --good:#0a7d0a; --good-soft:#e7f5e7; --warn:#8a5a00; --warn-soft:#fdf3dc; --bad:#b3261e; --bad-soft:#fbe9e7;
+  --bar:#2a78d6; --bar-neg:#9a9893; --grid:#ebe9e4;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 2px 8px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121211; --surface:#1a1a19; --surface-2:#1f1f1e; --line:#2f2f2d; --line-2:#3d3d3a;
+    --text:#f4f3ef; --text-2:#c3c2b7; --muted:#97958d;
+    --accent:#3987e5; --accent-soft:#1b2a3d; --accent-ink:#9cc4f5;
+    --good:#5fcf5f; --good-soft:#1b2e1b; --warn:#f0c060; --warn-soft:#33290f; --bad:#f2867e; --bad-soft:#3a1d1b;
+    --bar:#3987e5; --bar-neg:#6d6c67; --grid:#2a2a28; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121211; --surface:#1a1a19; --surface-2:#1f1f1e; --line:#2f2f2d; --line-2:#3d3d3a;
+  --text:#f4f3ef; --text-2:#c3c2b7; --muted:#97958d;
+  --accent:#3987e5; --accent-soft:#1b2a3d; --accent-ink:#9cc4f5;
+  --good:#5fcf5f; --good-soft:#1b2e1b; --warn:#f0c060; --warn-soft:#33290f; --bad:#f2867e; --bad-soft:#3a1d1b;
+  --bar:#3987e5; --bar-neg:#6d6c67; --grid:#2a2a28; --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;gap:16px;align-items:center;height:52px}
+.brand{font-weight:700;white-space:nowrap}
+nav.toc{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+nav.toc::-webkit-scrollbar{display:none}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--text-2);font-size:14px;padding:6px 10px;border-radius:8px}
+nav.toc a:hover{background:var(--surface);color:var(--text)}
+.theme{border:1px solid var(--line-2);background:var(--surface);color:var(--text-2);border-radius:8px;padding:5px 9px;font-size:13px;cursor:pointer}
+.hero{padding:40px 0 16px}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--warn);background:var(--warn-soft);border-radius:999px;padding:4px 12px;margin-bottom:14px}
+h1{font-size:clamp(28px,4.4vw,44px);line-height:1.12;margin:0 0 12px;letter-spacing:-.01em}
+.lead{font-size:19px;color:var(--text-2);max-width:820px;margin:0}
+.meta{color:var(--muted);font-size:14px;margin-top:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 8px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.kpi .v{font-size:30px;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.kpi .v small{font-size:16px;font-weight:600;color:var(--text-2)}
+.kpi .l{color:var(--text-2);font-size:14px;margin-top:6px}
+.kpi .n{color:var(--muted);font-size:12.5px;margin-top:6px}
+section{padding:36px 0 8px;border-top:1px solid var(--line);margin-top:28px}
+section>h2{font-size:clamp(22px,3vw,30px);margin:0 0 6px;letter-spacing:-.01em}
+.num{color:var(--accent);font-weight:700;margin-right:10px}
+.sub{color:var(--text-2);margin:0 0 20px;max-width:860px}
+h3{font-size:19px;margin:26px 0 10px}
+p{margin:0 0 12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpis>*,.grid2>*,.grid3>*,.land>*,.flow>*,.gallery>*,.videos>*{min-width:0}
+.kpi .l,.kpi .n,.card{overflow-wrap:anywhere}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+ul.clean{padding-left:20px;margin:0 0 12px}
+ul.clean li{margin:4px 0}
+.note{border-left:3px solid var(--accent);background:var(--accent-soft);padding:12px 16px;border-radius:0 10px 10px 0;margin:16px 0;color:var(--text)}
+.note.warn{border-color:var(--warn);background:var(--warn-soft)}
+.note.bad{border-color:var(--bad);background:var(--bad-soft)}
+.note.good{border-color:var(--good);background:var(--good-soft)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:12px 0 16px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);color:var(--text-2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700;background:var(--surface-2)}
+.pill{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:var(--good-soft);color:var(--good)}
+.pill.chk{background:var(--warn-soft);color:var(--warn)}
+.pill.no{background:var(--bad-soft);color:var(--bad)}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:12px 0 18px}
+.step{background:var(--surface);border:1px solid var(--line);padding:16px;position:relative}
+.step:first-child{border-radius:14px 0 0 14px}
+.step:last-child{border-radius:0 14px 14px 0}
+.step+.step{border-left:0}
+.step b{display:block;font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.step .t{font-weight:700;font-size:17px;margin-bottom:6px}
+.step p{font-size:14.5px;color:var(--text-2);margin:0}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 16px 8px;margin:12px 0 16px;position:relative}
+.chart .ct{font-weight:600;margin-bottom:2px}
+.chart .cs{color:var(--muted);font-size:13px;margin-bottom:8px}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{fill:var(--text-2);font-size:11px;font-family:inherit}
+.tip{position:absolute;pointer-events:none;background:var(--text);color:var(--bg);font-size:13px;padding:6px 9px;border-radius:8px;white-space:nowrap;opacity:0;transition:opacity .1s;transform:translate(-50%,-110%)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--surface-2)}
+.gallery figcaption{font-size:13px;color:var(--text-2);padding:8px 10px}
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.videos figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.videos video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.videos figcaption{font-size:13px;color:var(--text-2);padding:8px 10px}
+.land{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}
+.land img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.gate{display:grid;grid-template-columns:110px 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);margin:10px 0}
+.gate .m{background:var(--accent-soft);color:var(--accent-ink);font-weight:700;padding:14px;display:flex;flex-direction:column;justify-content:center}
+.gate .m small{font-weight:500;color:var(--text-2)}
+.gate .b{padding:14px 16px}
+.gate .b p{margin:0 0 6px}
+.gate .b .cond{font-size:14px;color:var(--text-2)}
+.check li{list-style:none;position:relative;padding-left:26px;margin:6px 0}
+.check{padding-left:0}
+.check li:before{content:"";position:absolute;left:2px;top:5px;width:14px;height:14px;border:1.5px solid var(--line-2);border-radius:4px}
+footer{margin:48px 0 0;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+@media (max-width:860px){
+  .kpis{grid-template-columns:1fr 1fr}
+  .grid2,.grid3,.land{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .videos{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .step,.step:first-child,.step:last-child{border-radius:0}
+  .step+.step{border-left:1px solid var(--line);border-top:0}
+  .step:first-child{border-radius:14px 14px 0 0}.step:last-child{border-radius:0 0 14px 14px}
+  .brand{display:none}
+  .gate{grid-template-columns:1fr}
+}
+@media print{
+  header.top,.theme{display:none}
+  body{background:#fff}
+  section{break-inside:auto}
+  .card,.tbl,.chart,.gate{break-inside:avoid}
+  video{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">Соседние карьеры</div>
+  <nav class="toc" aria-label="Разделы">
+    <a href="#verdict">Вывод</a><a href="#self">Наш карьер</a><a href="#quarries">Карьеры рядом</a><a href="#compare">Сравнение с планом</a><a href="#clay">Покупатели глины</a><a href="#prices">Цены</a><a href="#demand">Спрос</a><a href="#stress">Стресс-тест</a><a href="#proof">Что доказать</a><a href="#sources">Источники</a>
+  </nav>
+  <button class="theme" id="theme" type="button" aria-label="Сменить тему">◐</button>
+</div></header>
+<main class="wrap">
+<div class="hero">
+  <div class="status">● Приложение к бизнес-плану · данные на 12.10.2026</div>
+  <h1>Реально ли это? Сравнение плана с карьерами по соседству</h1>
+  <p class="lead">Карьеры известняка в 25–65 км от Зудны уже работают в том масштабе и с той рентабельностью, которые заложены в план. Их отчётность сверена с государственным источником — ГИР БО ФНС. Ниже показано, что из плана подтверждается соседями, а что директор должен подтвердить договорами.</p>
+  <p class="meta">К <a href="business-plan.html">бизнес-плану развития карьера «Зудна»</a> и <a href="tz.html">ТЗ директора</a>. Суммы — млн руб. без НДС, если не указано иное. Расстояния — по прямой от д. Зудна, оценка по координатам, а не маршрут.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="v">747 <small>млн ₽</small></div><div class="l">Выручка Пореченского карьера за 2025 год, 26 км</div><div class="n">План «Зудны» на второй год — 681 млн</div></div>
+    <div class="kpi"><div class="v">32,7<small>%</small></div><div class="l">Прибыль до налога у Пореченского, 2025</div><div class="n">План «Зудны» — 29%</div></div>
+    <div class="kpi"><div class="v">23,4<small>%</small></div><div class="l">Прибыль до налога у «Восточных Берников», 2025</div><div class="n">Выручка 4,59 млрд, 33 км</div></div>
+    <div class="kpi"><div class="v">85 <small>чел.</small></div><div class="l">Штат Пореченского при выручке 747 млн</div><div class="n">План «Зудны» — около 60 человек</div></div>
+  </div>
+</div>
+
+<section id="verdict">
+  <h2><span class="num">01</span>Коротко</h2>
+  <div class="grid3">
+    <div class="card"><h3><span class="pill ok">подтверждается</span></h3>
+      <ul class="clean">
+        <li>Масштаб: соседи зарабатывают 650–750 млн в год, и план выходит на тот же уровень.</li>
+        <li>Рентабельность 29%: у зрелых известняковых карьеров рядом — 15,6–32,7%.</li>
+        <li>600 тыс. т щебня в год — вдвое меньше, чем у средних соседей (около 1,3 млн т).</li>
+        <li>Выход щебня 52,5% консервативен: отраслевой — до 75%.</li>
+        <li>Около 11 млн выручки на человека: у соседей 8,8–16 млн.</li>
+      </ul></div>
+    <div class="card"><h3><span class="pill chk">на границе рынка</span></h3>
+      <ul class="clean">
+        <li>Щебень по 1 150 ₽/т с НДС — это уровень прайса лидера рынка («Берники»: 1 170–1 230). Калужский сосед продаёт за 850–1 150, а крупный опт обычно идёт со скидкой.</li>
+        <li>Отсев по 300 ₽/т — верх рынка (160–320), а отсев продаётся плохо.</li>
+        <li>50 млн инвестиций — мало по сравнению с новыми проектами. Хватит только потому, что карьер, техника и ДСК уже есть.</li>
+      </ul></div>
+    <div class="card"><h3><span class="pill no">нужно доказать договорами</span></h3>
+      <ul class="clean">
+        <li><b>Глина 60 тыс. т в месяц.</b> Это потребность 3–4 керамзитовых заводов при полной загрузке. Сейчас карьер продаёт 16–17 тыс. т в месяц.</li>
+        <li><b>Цена глины 380 ₽/т.</b> Фактическая цена карьера — 304–312 ₽/т, у торговцев в Туле — 190–200 ₽/т.</li>
+        <li><b>Сбыт щебня</b> на сжимающемся рынке: в 2025 году −10–12% по России.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section id="self">
+  <h2><span class="num">02</span>Наш карьер сегодня: ООО СП «Агротехпром»</h2>
+  <p class="sub">ИНН 4020005533, ОКВЭД 08.12.2 «Добыча глины», д. Зудна. Отчётность — ГИР БО ФНС.</p>
+  <div class="tbl"><table>
+    <tr><th>Год</th><th class="r">Выручка</th><th class="r">Расходы</th><th class="r">Чистая прибыль</th><th class="r">Основные средства</th><th class="r">Активы</th></tr>
+    <tr><td>2021</td><td class="r">25,2</td><td class="r">25,2</td><td class="r">0,1</td><td class="r">10,4</td><td class="r">142,1</td></tr>
+    <tr><td>2022</td><td class="r">73,7</td><td class="r">79,8</td><td class="r">0,7</td><td class="r">28,6</td><td class="r">142,1</td></tr>
+    <tr><td>2023</td><td class="r">71,0</td><td class="r">70,5</td><td class="r">1,7</td><td class="r">23,5</td><td class="r">155,5</td></tr>
+    <tr><td>2024</td><td class="r">61,8</td><td class="r">61,7</td><td class="r">0,6</td><td class="r">26,5</td><td class="r">156,5</td></tr>
+    <tr><td>2025</td><td class="r">69,4</td><td class="r">73,0</td><td class="r">0,2</td><td class="r">19,8</td><td class="r">151,4</td></tr>
+  </table></div>
+  <div class="note warn">Сейчас карьер зарабатывает около 70 млн в год, почти целиком на глине. План — 681 млн во второй год, то есть почти в 10 раз больше. Значит, это перезапуск щебёночного производства на уже имеющемся месторождении, технике и ДСК, а не постепенный рост. Поэтому важно сравнить план с соседями, которые этот масштаб уже держат.</div>
+</section>
+
+<section id="quarries">
+  <h2><span class="num">03</span>Карьеры известняка рядом</h2>
+  <p class="sub">Выручка и прибыль — ГИР БО ФНС (выгрузка 12.10.2026), численность — агрегатор checko по данным ФНС за 2025 год. Рентабельность считается от выручки.</p>
+  <div class="tbl"><table>
+    <tr><th>Компания, ИНН</th><th>Где, от Зудны</th><th class="r">Выручка 2023</th><th class="r">2024</th><th class="r">2025</th><th class="r">Прибыль до налога 2025, %</th><th class="r">Чистая прибыль 2025</th><th class="r">Штат</th></tr>
+    <tr><td><b>АО «Пореченский карьер»</b>, 7133016323</td><td>Дубенский р-н, ~26 км</td><td class="r">824,6</td><td class="r">839,2</td><td class="r">746,9</td><td class="r">32,7</td><td class="r">202,6</td><td class="r">85</td></tr>
+    <tr><td><b>ООО «Восточные Берники»</b>, 7130024372</td><td>Тула, ст. Берники, ~33 км</td><td class="r">3 462,6</td><td class="r">4 212,8</td><td class="r">4 585,7</td><td class="r">23,4</td><td class="r">885,2</td><td class="r">447</td></tr>
+    <tr><td>ООО «Малиновский ДСЗ», 7130025986</td><td>Тула, Малиновка, ~36 км</td><td class="r">524,4</td><td class="r">651,6</td><td class="r">657,4</td><td class="r">24,5 (2024)</td><td class="r">66,9</td><td class="r">53</td></tr>
+    <tr><td>ООО «Карьер Сервис», 7725374870 *</td><td>Андреевское м-е под Калугой, ~33 км</td><td class="r">270,8</td><td class="r">398,4</td><td class="r">394,1</td><td class="r">—</td><td class="r">14,2</td><td class="r">9</td></tr>
+    <tr><td>ООО «ДСЗ» (ГК «Терекс»), 4004011522 **</td><td>Товарково, ~64 км</td><td class="r">1 234,0</td><td class="r">1 231,0</td><td class="r">1 323,6</td><td class="r">8,6</td><td class="r">85,3</td><td class="r">317</td></tr>
+    <tr><td>ООО «Ока-Калуга» (Парсуковский карьер), 4018009555</td><td>Тарусский р-н, ~28 км</td><td class="r">90,3</td><td class="r">80,4</td><td class="r">38,7</td><td class="r">≈0</td><td class="r">0</td><td class="r">18</td></tr>
+    <tr><td>АО «Рождественский карьер», 4810002282</td><td>Липецкая обл., ~222 км ***</td><td class="r">555,5</td><td class="r">699,7</td><td class="r">506,1</td><td class="r">21,1</td><td class="r">70,2</td><td class="r">—</td></tr>
+    <tr><td>АО «Ольшанский карьер», 4821014339</td><td>Елец, ~226 км ***</td><td class="r">487,7</td><td class="r">663,9</td><td class="r">686,4</td><td class="r">16,7</td><td class="r">85,4</td><td class="r">—</td></tr>
+  </table></div>
+  <p style="font-size:13.5px;color:var(--muted)">* Связь ИНН с Андреевским месторождением установлена только по агрегатору; сверить с реестром лицензий. ** Вид камня не установлен. *** Дальше 150 км — для сравнения масштаба, не как прямые конкуренты. Карьер «Борщевский» (около 9 км) — сырьевая база цементного завода, на открытый рынок не продаёт.</p>
+
+  <div class="chart" id="chartMargin">
+    <div class="ct">Прибыль до налога, % от выручки, 2025 год</div>
+    <div class="cs">ГИР БО ФНС; у «Малиновского ДСЗ» — 2024 год (за 2025 год подана упрощённая форма). «Зудна» — план второго года по модели.</div>
+    <svg viewBox="0 0 1000 300" role="img" aria-label="Рентабельность до налога соседних карьеров и план"></svg>
+    <div class="tip"></div>
+  </div>
+
+  <h3>Объёмы в тоннах</h3>
+  <p>Объёмы отгрузок за 2023–2025 годы ни одна компания не публикует. Есть внутренние документы 2020 года по конкурентам. «Берники» продали 2,46 млн т за январь–ноябрь 2020 года, около 224 тыс. т в месяц; в июле 2020 года — 244,9 тыс. т на 99,3 млн руб. без НДС. У Пореченского и Рождественского по плану на сентябрь 2020 года — по 106–108 тыс. т в месяц. План «Зудны» — 120 тыс. т в сезонный месяц, из них щебня только 50 тыс. т. Это меньше половины того, что отгружают средние соседи.</p>
+</section>
+
+<section id="compare">
+  <h2><span class="num">04</span>План «Зудны» против соседей</h2>
+  <div class="tbl"><table>
+    <tr><th>Параметр</th><th>План «Зудны»</th><th>Соседи</th><th>Вывод</th></tr>
+    <tr><td>Выручка в год без НДС</td><td>681 млн (2-й год), 819 млн при полной мощности круглый год</td><td>Пореченский — 747; Ольшанский — 686; Малиновский ДСЗ — 657</td><td><span class="pill ok">подтверждается</span></td></tr>
+    <tr><td>Щебень в год</td><td>около 500–600 тыс. т</td><td>средние соседи — около 1,3 млн т; «Берники» — около 2,7 млн т (2020)</td><td><span class="pill ok">по мощности</span> сбыт — договорами</td></tr>
+    <tr><td>Прибыль до налога</td><td>200 млн, 29% (2-й год)</td><td>15,6–32,7% у зрелых известняковых карьеров (2024–2025)</td><td><span class="pill ok">в диапазоне</span></td></tr>
+    <tr><td>Выход щебня из горной массы</td><td>52,5%</td><td>отрасль — до 75%</td><td><span class="pill ok">консервативно</span></td></tr>
+    <tr><td>Выручка на человека</td><td>около 11 млн (681 / ~60)</td><td>Пореченский — 8,8; Малиновский ДСЗ — 12,4; «Берники» — 10,3</td><td><span class="pill ok">подтверждается</span></td></tr>
+    <tr><td>Цена щебня с НДС</td><td>1 150 ₽/т на весь объём</td><td>«Берники» — 1 170–1 230 (прайс); «Карьер Сервис» — 850–1 150; средняя цена производителей в РФ — 663 без НДС (2025)</td><td><span class="pill chk">верх рынка</span></td></tr>
+    <tr><td>Цена глины с НДС</td><td>380 ₽/т (минимум по ТЗ — 340)</td><td>факт «Агротехпрома» — 304–312; торговцы в Туле — 190–200</td><td><span class="pill no">договорами</span></td></tr>
+    <tr><td>Глина в год</td><td>около 650 тыс. т</td><td>завод на 200 тыс. м³ керамзита потребляет около 160 тыс. т глины</td><td><span class="pill no">договорами</span></td></tr>
+    <tr><td>Инвестиции</td><td>50 млн</td><td>основные средства соседей — 190–415 млн; новые проекты — 0,6–1,25 млрд</td><td><span class="pill chk">только для перезапуска</span></td></tr>
+  </table></div>
+  <div class="note">Чем «Зудна» отличается от новых проектов: месторождение, лицензия до 2029 года, ДСК, экскаваторы, самосвалы, подстанция и подъезды уже есть. Новый карьер на 2 млн т в год (Рюриковский, Тульская область) требует 1,25 млрд руб. на первом этапе. Здесь деньги нужны на ремонт, оборотные средства и вторую весовую, поэтому 50 млн хватает. Ориентир стоимости: в феврале 2026 года тульский карьер с двумя площадками по 1,2 млн т в год выставлен на продажу за 0,6 млрд руб.</div>
+</section>
+
+<section id="clay">
+  <h2><span class="num">05</span>Покупатели глины рядом</h2>
+  <p class="sub">Керамзитовые и кирпичные заводы в 23–72 км. Их выручка показывает, что заводы работают и растут. Но годовой объём, который карьер закладывает в план, равен потребности нескольких таких заводов.</p>
+  <div class="tbl"><table>
+    <tr><th>Завод, ИНН</th><th>Где, от Зудны</th><th class="r">Выручка 2023</th><th class="r">2024</th><th class="r">2025</th><th>Что известно</th></tr>
+    <tr><td>ООО «АКЗ» (Алексинский керамзитовый завод), 7111504550</td><td>Алексин, ~23 км</td><td class="r">552,3</td><td class="r">757,5</td><td class="r">835,7</td><td>2 печи по 100 тыс. м³/год ≈ 160 тыс. т глины в год при полной загрузке</td></tr>
+    <tr><td>ООО «Керамзит», 7111020566</td><td>Алексин, ~23 км</td><td class="r">397,0</td><td class="r">222,6</td><td class="r">280,0</td><td></td></tr>
+    <tr><td>ООО «Алексинский кирпич», 7100005894</td><td>Алексин, ~23 км</td><td class="r">202,4</td><td class="r">189,4</td><td class="r">290,6</td><td>Покупатель кирпичной глины</td></tr>
+    <tr><td>ООО «КЗКГ», 4004402999</td><td>Калуга, Мстихино, ~47 км</td><td class="r">559,0</td><td class="r">735,2</td><td class="r">709,6</td><td>89 человек; есть 2 лицензии — возможно, своё сырьё</td></tr>
+    <tr><td>АО «Керамзит», 5077000250</td><td>Серпухов, ~72 км</td><td class="r">729,7</td><td class="r">791,5</td><td class="r">1 114,4</td><td>По сайту завода, глину берут «на близлежащих открытых карьерах»</td></tr>
+    <tr><td>АО «Керамзит», 6230000790</td><td>Рязань, ~193 км</td><td class="r">627,9</td><td class="r">710,3</td><td class="r">764,7</td><td>Далеко: дорогая доставка</td></tr>
+  </table></div>
+  <div class="note warn"><b>Арифметика спроса.</b> На 1 м³ керамзита уходит около 0,8 т глины. Завод на 200 тыс. м³ при полной загрузке берёт около 160 тыс. т глины в год. План — около 650 тыс. т глины в год, то есть почти весь спрос 3–4 заводов. Карьер уже продаёт 205 тыс. т в год, значит у него есть 1–2 постоянных покупателя. Утроить продажи можно только по годовым договорам. Кроме того, с 01.09.2026 добывает глину Рюриковское месторождение в Тульской области (запасы 14 млн м³). Это новый конкурент.</div>
+</section>
+
+<section id="prices">
+  <h2><span class="num">06</span>Цены рядом</h2>
+  <div class="tbl"><table>
+    <tr><th>Источник</th><th>Дата</th><th>Щебень М600 5–20 / 20–40 / 40–70</th><th>Отсев</th><th>Глина</th><th>НДС</th></tr>
+    <tr><td>«Восточные Берники», berniki.ru</td><td>12.10.2026</td><td>1 170 / 1 230 / 1 200; еврофракции — 1 445</td><td>160 (0–5) / 320 (0–10); мука — 1 800–2 600</td><td>—</td><td>с НДС</td></tr>
+    <tr><td>«Карьер Сервис», karer.services</td><td>не указана</td><td>850 / 1 150 / 1 100</td><td>200</td><td>—</td><td>с НДС, самовывоз, опт — договорная</td></tr>
+    <tr><td>Парсуковский карьер, parsuki.ru</td><td>не указана, вероятно устарела</td><td>500 (М600–М800)</td><td>мука 150</td><td>—</td><td>не указан</td></tr>
+    <tr><td>«Торгсервис», Тула (торговец)</td><td>не указана</td><td>640–650 ₽/м³</td><td>90 ₽/м³</td><td>200</td><td>с НДС</td></tr>
+    <tr><td>«СтройПартнер», Тула (торговец)</td><td>не указана</td><td>—</td><td>—</td><td>от 190</td><td>не указан</td></tr>
+    <tr><td><b>Факт «Агротехпрома»</b></td><td>2025 / 2026</td><td>835 (2025, средняя)</td><td>150 (договор 2025)</td><td><b>304 / 312</b></td><td>с НДС</td></tr>
+    <tr><td><b>План «Зудны»</b></td><td></td><td><b>1 150</b> на все фракции</td><td><b>300</b></td><td><b>380</b> (минимум 340)</td><td>с НДС</td></tr>
+  </table></div>
+  <p style="font-size:14.5px;color:var(--text-2)">По внутренним документам 2020 года фактическая средняя цена продаж у «Берников» — 406 ₽/т без НДС, у Пореченского — около 397, у Рождественского — 361. Прайс производителя — это верхний ориентир: в среднем по объёму цена ниже.</p>
+</section>
+
+<section id="demand">
+  <h2><span class="num">07</span>Спрос: что за и что против</h2>
+  <div class="grid2">
+    <div class="card"><h3>За</h3>
+      <ul class="clean">
+        <li>Реконструкция трассы М-3 на 65–124 км, из них 38 км в Калужской области, завершение в 2026 году.</li>
+        <li>Нацпроект в Калужской области: в 2026 году 158 км дорог, 17 контрактов, 780 тыс. м² верхних слоёв.</li>
+        <li>Лидер рынка «Берники» в 2025 году вырос на 9% по выручке и вкладывает около 1 млрд руб. в модернизацию.</li>
+        <li>Калужский рынок только у «Берников» — 172 тыс. т за 11 месяцев 2020 года.</li>
+      </ul></div>
+    <div class="card"><h3>Против</h3>
+      <ul class="clean">
+        <li>Рынок щебня в России в 2025 году сжался: производство −10,4%, продажи −12%, нерудные материалы −14%.</li>
+        <li>Выручка соседей за 2025 год: Пореченский −11%, Рождественский −28%, Парсуковский −52%.</li>
+        <li>Новое предложение: Рюриковский карьер на 2 млн т в год с сентября 2026 года.</li>
+        <li>Сколько щебня нужно дорожным объектам, публично не раскрыто.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section id="stress">
+  <h2><span class="num">08</span>Стресс-тест: план при рыночных ценах</h2>
+  <p class="sub">Модель пересчитана с ценами соседей, с той же техникой, второй весовой и погашением долга 7,13 млн в месяц.</p>
+  <div class="tbl"><table>
+    <tr><th>Цены с НДС: щебень / глина / отсев, ₽/т</th><th>Глина в месяц</th><th class="r">Год 2, млн</th><th class="r">В месяц</th><th class="r">Деньги инвестора</th><th>Цель ≥15</th></tr>
+    <tr><td>1 150 / 380 / 300 — план</td><td>60 тыс. т</td><td class="r">200,0</td><td class="r">16,7</td><td class="r">47,3</td><td><span class="pill ok">да</span></td></tr>
+    <tr><td>1 100 / 340 / 300</td><td>60 тыс. т</td><td class="r">161,4</td><td class="r">13,4</td><td class="r">48,8</td><td><span class="pill chk">нет</span></td></tr>
+    <tr><td>1 050 / 310 / 250</td><td>60 тыс. т</td><td class="r">123,4</td><td class="r">10,3</td><td class="r">50,1</td><td><span class="pill no">нет</span></td></tr>
+    <tr><td>1 000 / 310 / 200</td><td>60 тыс. т</td><td class="r">100,5</td><td class="r">8,4</td><td class="r">51,6</td><td><span class="pill no">нет</span></td></tr>
+    <tr><td>1 050 / 310 / 250</td><td>40 тыс. т</td><td class="r">55,4</td><td class="r">4,6</td><td class="r">больше 50</td><td><span class="pill no">нет</span></td></tr>
+  </table></div>
+  <div class="note bad"><b>Что из этого следует.</b> При ценах ниже плановых карьер остаётся прибыльным, но цель 15 млн в месяц не выполняется, а долг 128,3 млн гасится дольше 24 месяцев. Главное условие плана — продажа 60 тыс. т глины в месяц: без неё результат падает в 3–4 раза. Поэтому в ТЗ договоры на глину и минимальная цена 340 ₽/т стоят условием перехода к полной мощности, а рост объёмов без оплаченных заявок запрещён.</div>
+</section>
+
+<section id="proof">
+  <h2><span class="num">09</span>Что директор передаёт инвестору как доказательство</h2>
+  <ul class="check">
+    <li>Годовые договоры или письма о намерениях керамзитовых и кирпичных заводов (АКЗ, «Керамзит» Алексин, КЗКГ, «Керамзит» Серпухов, «Алексинский кирпич») — на 60 тыс. т глины в месяц в сумме, по цене от 340 ₽/т.</li>
+    <li>Накладные и банковские поступления по глине за 2025–2026 годы: 205 тыс. т в год по 304–312 ₽/т — уже работающий канал.</li>
+    <li>Письма дорожных подрядчиков по М-3 и нацпроекту, бетонных заводов и торговых компаний — на 50 тыс. т щебня в месяц, с ценой по фракциям.</li>
+    <li>Протоколы качества щебня текущего уступа (М600–М800) и паспорт ДСК; акт трёх контрольных смен с весами.</li>
+    <li>Договор БВР и маркшейдерский план фронта работ на 6 месяцев вперёд.</li>
+    <li>Согласованный ПРГР 2026 на расширенные объёмы.</li>
+  </ul>
+  <p>Когда эти документы будут на руках, план подтверждается не сравнением, а договорами. Сравнение с соседями показывает: масштаб и экономика реальны, если сбыт закрыт.</p>
+</section>
+
+<section id="sources">
+  <h2><span class="num">10</span>Источники</h2>
+  <div class="tbl"><table>
+    <tr><th>Что</th><th>Источник</th></tr>
+    <tr><td>Бухгалтерская отчётность всех компаний, 2021–2025</td><td>ГИР БО ФНС: <a href="https://bo.nalog.gov.ru/organizations-card/4791225" target="_blank" rel="noopener">«Агротехпром»</a>, <a href="https://bo.nalog.gov.ru/organizations-card/7038554" target="_blank" rel="noopener">Пореченский</a>, <a href="https://bo.nalog.gov.ru/organizations-card/1843156" target="_blank" rel="noopener">«Берники»</a>, <a href="https://bo.nalog.gov.ru/organizations-card/3112456" target="_blank" rel="noopener">Малиновский ДСЗ</a>, <a href="https://bo.nalog.gov.ru/organizations-card/10234768" target="_blank" rel="noopener">«Карьер Сервис»</a>, <a href="https://bo.nalog.gov.ru/organizations-card/5790547" target="_blank" rel="noopener">«ДСЗ»</a>, <a href="https://bo.nalog.gov.ru/organizations-card/1985296" target="_blank" rel="noopener">«Ока-Калуга»</a>, <a href="https://bo.nalog.gov.ru/organizations-card/1840371" target="_blank" rel="noopener">Рождественский</a>, <a href="https://bo.nalog.gov.ru/organizations-card/1863042" target="_blank" rel="noopener">Ольшанский</a>; заводы — по ИНН на bo.nalog.gov.ru (выгрузка 12.10.2026)</td></tr>
+    <tr><td>Численность</td><td>checko.ru (агрегатор, данные ФНС за 2025 год)</td></tr>
+    <tr><td>Цены</td><td><a href="https://www.berniki.ru/" target="_blank" rel="noopener">berniki.ru</a>, <a href="https://karer.services/pages/prices" target="_blank" rel="noopener">karer.services</a>, <a href="https://www.parsuki.ru/" target="_blank" rel="noopener">parsuki.ru</a>, <a href="https://www.ts71.ru/prajs-list/nerudnye_materialy" target="_blank" rel="noopener">ts71.ru</a>, <a href="https://stp71.ru/produktsiya/grunt/glina-keramzitovaya/" target="_blank" rel="noopener">stp71.ru</a>, <a href="https://brokenstone.ru/news/4930/" target="_blank" rel="noopener">brokenstone.ru</a></td></tr>
+    <tr><td>Керамзит: мощность и расход глины</td><td><a href="https://www.keramzit-aleksin.ru/about/" target="_blank" rel="noopener">keramzit-aleksin.ru</a>, <a href="https://zao-keramzit.com/product/keramzit/" target="_blank" rel="noopener">zao-keramzit.com</a>, forpsk.ru («Пластический способ производства керамзита»)</td></tr>
+    <tr><td>Рынок</td><td><a href="https://marketing.rbc.ru/articles/16510/" target="_blank" rel="noopener">РБК</a>, <a href="https://cmpro.ru/rus/news/novosti-rinka/stroitel_nie_materiali/rinok-stroimaterialov-itogi-2025.html" target="_blank" rel="noopener">CM Pro</a>, <a href="https://finance.rambler.ru/business/56957219-v-tulskoy-oblasti-nachali-formirovat-gornodobyvayuschiy-klaster/" target="_blank" rel="noopener">Рамблер</a></td></tr>
+    <tr><td>Новые проекты и сделки</td><td><a href="https://www.atomic-energy.ru/news/2026/07/17/167207" target="_blank" rel="noopener">Рюриковский карьер</a>, <a href="https://karyer.info/5123-2/" target="_blank" rel="noopener">karyer.info</a>, <a href="https://runews24.ru/tula/04/06/2026/na-pmef-podpisano-soglashenie-o-razvitii-proizvodstva-kompanii-vostochnyie-berniki-v-tulskoj-oblasti" target="_blank" rel="noopener">модернизация «Берников»</a>, <a href="https://tula.mk.ru/economics/2026/02/13/v-tulskoy-oblasti-aktivy-gornodobyvayushhego-predpriyatiya-prodayut-za-06-mlrd.html" target="_blank" rel="noopener">продажа карьера за 0,6 млрд</a></td></tr>
+    <tr><td>Стройка</td><td><a href="https://www.interfax-russia.ru/center/news/rekonstrukciya-uchastka-trassy-m-3-v-kaluzhskoy-i-moskovskoy-oblasti-zavershitsya-v-2026g-vlasti" target="_blank" rel="noopener">М-3 (Интерфакс)</a>, <a href="https://russianhighways.ru/press/news/115406/" target="_blank" rel="noopener">Автодор</a>, <a href="https://www.vest-news.ru/news/1000514780" target="_blank" rel="noopener">дороги Калужской области</a></td></tr>
+    <tr><td>Объёмы конкурентов 2020 года</td><td>внутренние материалы в папке карьера на сетевом диске («Конкуренты карьер в Берники…», «Конкуренты Карьер Михайловского ГОК…»)</td></tr>
+    <tr><td>Стресс-тест</td><td>финансовая модель v3, пересчитанная её движком формул 12.10.2026</td></tr>
+  </table></div>
+</section>
+
+<footer>Приложение к бизнес-плану развития карьера «Зудна», 12.10.2026. Отчётность третьих лиц — из открытого государственного ресурса ГИР БО; расстояния и расход глины — оценки. Проект: проверяет ответственный сотрудник. Подготовлен ООО «РЕСУРСПРОЕКТ».</footer>
+</main>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');try{var t=localStorage.getItem('bp-theme');if(t)root.setAttribute('data-theme',t);}catch(e){}
+  btn.addEventListener('click',function(){var cur=root.getAttribute('data-theme');var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var next=dark?'light':'dark';root.setAttribute('data-theme',next);try{localStorage.setItem('bp-theme',next);}catch(e){}});
+  var data=[['Пореченский, 26 км',32.7],['План «Зудны», 2-й год',29.4,1],['Малиновский ДСЗ, 36 км (2024)',24.5],['«Берники», 33 км',23.4],['Рождественский, 222 км',21.1],['Ольшанский, 226 км',16.7],['«ДСЗ» Товарково, 64 км',8.6]];
+  var box=document.getElementById('chartMargin'),svg=box.querySelector('svg'),tip=box.querySelector('.tip');
+  var W=1000,L=250,R=60,rowH=38,T=8,H=T+data.length*rowH+24,max=35;svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  var x=function(v){return L+v/max*(W-L-R);},s='';
+  [0,10,20,30].forEach(function(g){s+='<line x1="'+x(g)+'" x2="'+x(g)+'" y1="'+T+'" y2="'+(H-22)+'" stroke="var(--grid)"/><text x="'+x(g)+'" y="'+(H-6)+'" text-anchor="middle">'+g+'%</text>';});
+  data.forEach(function(d,i){var y=T+i*rowH+8,h=rowH-16,w=x(d[1])-L;
+    s+='<text x="'+(L-10)+'" y="'+(y+h/2+4)+'" text-anchor="end" style="fill:var(--text);font-size:13px'+(d[2]?';font-weight:700':'')+'">'+d[0]+'</text>';
+    s+='<path d="M'+L+','+y+'H'+(L+w-4)+'Q'+(L+w)+','+y+' '+(L+w)+','+(y+4)+'V'+(y+h-4)+'Q'+(L+w)+','+(y+h)+' '+(L+w-4)+','+(y+h)+'H'+L+'Z" fill="'+(d[2]?'var(--warn)':'var(--bar)')+'"/>';
+    s+='<text x="'+(L+w+8)+'" y="'+(y+h/2+4)+'" style="fill:var(--text);font-size:13px">'+String(d[1]).replace('.',',')+'%</text>';
+    s+='<rect class="hit" data-i="'+i+'" x="0" y="'+(T+i*rowH)+'" width="'+W+'" height="'+rowH+'" fill="transparent"/>';});
+  svg.innerHTML=s;
+  svg.addEventListener('mousemove',function(e){var t=e.target;if(!t.classList||!t.classList.contains('hit')){tip.style.opacity=0;return;}var d=data[+t.getAttribute('data-i')],rb=box.getBoundingClientRect();tip.textContent=d[0]+': '+String(d[1]).replace('.',',')+'%';tip.style.left=(e.clientX-rb.left)+'px';tip.style.top=(e.clientY-rb.top)+'px';tip.style.opacity=1;});
+  svg.addEventListener('mouseleave',function(){tip.style.opacity=0;});
+})();
+</script>
+</body>
+</html>

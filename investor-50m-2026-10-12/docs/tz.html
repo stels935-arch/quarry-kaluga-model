@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ТЗ директора карьера</title>
+<meta name="description" content="Техническое задание генерального директора ООО СП «Агротехпром»: вывод карьера «Зудна» на 120 тыс. т в месяц, единая смета 50 млн руб., график погашения долга.">
+<style>
+:root{
+  --bg:#f6f5f2; --surface:#ffffff; --surface-2:#fcfcfb; --line:#e3e1dc; --line-2:#cfccc5;
+  --text:#14130f; --text-2:#52514e; --muted:#7a7873;
+  --accent:#2a78d6; --accent-soft:#e8f1fc; --accent-ink:#174f94;
+  --good:#0a7d0a; --good-soft:#e7f5e7; --warn:#8a5a00; --warn-soft:#fdf3dc; --bad:#b3261e; --bad-soft:#fbe9e7;
+  --bar:#2a78d6; --bar-neg:#9a9893; --grid:#ebe9e4;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 2px 8px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121211; --surface:#1a1a19; --surface-2:#1f1f1e; --line:#2f2f2d; --line-2:#3d3d3a;
+    --text:#f4f3ef; --text-2:#c3c2b7; --muted:#97958d;
+    --accent:#3987e5; --accent-soft:#1b2a3d; --accent-ink:#9cc4f5;
+    --good:#5fcf5f; --good-soft:#1b2e1b; --warn:#f0c060; --warn-soft:#33290f; --bad:#f2867e; --bad-soft:#3a1d1b;
+    --bar:#3987e5; --bar-neg:#6d6c67; --grid:#2a2a28; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121211; --surface:#1a1a19; --surface-2:#1f1f1e; --line:#2f2f2d; --line-2:#3d3d3a;
+  --text:#f4f3ef; --text-2:#c3c2b7; --muted:#97958d;
+  --accent:#3987e5; --accent-soft:#1b2a3d; --accent-ink:#9cc4f5;
+  --good:#5fcf5f; --good-soft:#1b2e1b; --warn:#f0c060; --warn-soft:#33290f; --bad:#f2867e; --bad-soft:#3a1d1b;
+  --bar:#3987e5; --bar-neg:#6d6c67; --grid:#2a2a28; --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;gap:16px;align-items:center;height:52px}
+.brand{font-weight:700;white-space:nowrap}
+nav.toc{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+nav.toc::-webkit-scrollbar{display:none}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--text-2);font-size:14px;padding:6px 10px;border-radius:8px}
+nav.toc a:hover{background:var(--surface);color:var(--text)}
+.theme{border:1px solid var(--line-2);background:var(--surface);color:var(--text-2);border-radius:8px;padding:5px 9px;font-size:13px;cursor:pointer}
+.hero{padding:40px 0 16px}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--warn);background:var(--warn-soft);border-radius:999px;padding:4px 12px;margin-bottom:14px}
+h1{font-size:clamp(28px,4.4vw,44px);line-height:1.12;margin:0 0 12px;letter-spacing:-.01em}
+.lead{font-size:19px;color:var(--text-2);max-width:820px;margin:0}
+.meta{color:var(--muted);font-size:14px;margin-top:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 8px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.kpi .v{font-size:30px;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.kpi .v small{font-size:16px;font-weight:600;color:var(--text-2)}
+.kpi .l{color:var(--text-2);font-size:14px;margin-top:6px}
+.kpi .n{color:var(--muted);font-size:12.5px;margin-top:6px}
+section{padding:36px 0 8px;border-top:1px solid var(--line);margin-top:28px}
+section>h2{font-size:clamp(22px,3vw,30px);margin:0 0 6px;letter-spacing:-.01em}
+.num{color:var(--accent);font-weight:700;margin-right:10px}
+.sub{color:var(--text-2);margin:0 0 20px;max-width:860px}
+h3{font-size:19px;margin:26px 0 10px}
+p{margin:0 0 12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpis>*,.grid2>*,.grid3>*,.land>*,.flow>*,.gallery>*,.videos>*{min-width:0}
+.kpi .l,.kpi .n,.card{overflow-wrap:anywhere}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+ul.clean{padding-left:20px;margin:0 0 12px}
+ul.clean li{margin:4px 0}
+.note{border-left:3px solid var(--accent);background:var(--accent-soft);padding:12px 16px;border-radius:0 10px 10px 0;margin:16px 0;color:var(--text)}
+.note.warn{border-color:var(--warn);background:var(--warn-soft)}
+.note.bad{border-color:var(--bad);background:var(--bad-soft)}
+.note.good{border-color:var(--good);background:var(--good-soft)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:12px 0 16px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);color:var(--text-2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700;background:var(--surface-2)}
+.pill{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:var(--good-soft);color:var(--good)}
+.pill.chk{background:var(--warn-soft);color:var(--warn)}
+.pill.no{background:var(--bad-soft);color:var(--bad)}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:12px 0 18px}
+.step{background:var(--surface);border:1px solid var(--line);padding:16px;position:relative}
+.step:first-child{border-radius:14px 0 0 14px}
+.step:last-child{border-radius:0 14px 14px 0}
+.step+.step{border-left:0}
+.step b{display:block;font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.step .t{font-weight:700;font-size:17px;margin-bottom:6px}
+.step p{font-size:14.5px;color:var(--text-2);margin:0}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 16px 8px;margin:12px 0 16px;position:relative}
+.chart .ct{font-weight:600;margin-bottom:2px}
+.chart .cs{color:var(--muted);font-size:13px;margin-bottom:8px}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{fill:var(--text-2);font-size:11px;font-family:inherit}
+.tip{position:absolute;pointer-events:none;background:var(--text);color:var(--bg);font-size:13px;padding:6px 9px;border-radius:8px;white-space:nowrap;opacity:0;transition:opacity .1s;transform:translate(-50%,-110%)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--surface-2)}
+.gallery figcaption{font-size:13px;color:var(--text-2);padding:8px 10px}
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.videos figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.videos video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.videos figcaption{font-size:13px;color:var(--text-2);padding:8px 10px}
+.land{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}
+.land img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.gate{display:grid;grid-template-columns:110px 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);margin:10px 0}
+.gate .m{background:var(--accent-soft);color:var(--accent-ink);font-weight:700;padding:14px;display:flex;flex-direction:column;justify-content:center}
+.gate .m small{font-weight:500;color:var(--text-2)}
+.gate .b{padding:14px 16px}
+.gate .b p{margin:0 0 6px}
+.gate .b .cond{font-size:14px;color:var(--text-2)}
+.check li{list-style:none;position:relative;padding-left:26px;margin:6px 0}
+.check{padding-left:0}
+.check li:before{content:"";position:absolute;left:2px;top:5px;width:14px;height:14px;border:1.5px solid var(--line-2);border-radius:4px}
+footer{margin:48px 0 0;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+@media (max-width:860px){
+  .kpis{grid-template-columns:1fr 1fr}
+  .grid2,.grid3,.land{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .videos{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .step,.step:first-child,.step:last-child{border-radius:0}
+  .step+.step{border-left:1px solid var(--line);border-top:0}
+  .step:first-child{border-radius:14px 14px 0 0}.step:last-child{border-radius:0 0 14px 14px}
+  .brand{display:none}
+  .gate{grid-template-columns:1fr}
+}
+@media print{
+  header.top,.theme{display:none}
+  body{background:#fff}
+  section{break-inside:auto}
+  .card,.tbl,.chart,.gate{break-inside:avoid}
+  video{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">ТЗ директора · «Зудна»</div>
+  <nav class="toc" aria-label="Разделы">
+    <a href="#goal">Цель</a><a href="#permits">Разрешения</a><a href="#stages">Этапы и задачи</a><a href="#norms">Нормативы</a><a href="#fleet">Техника</a><a href="#people">Люди</a><a href="#sales">Продажи</a><a href="#budget">Смета 50 млн</a><a href="#debt">Долг</a><a href="#control">Контроль</a><a href="#stop">Остановка</a><a href="#accept">Приёмка</a>
+  </nav>
+  <button class="theme" id="theme" type="button" aria-label="Сменить тему">◐</button>
+</div></header>
+<main class="wrap">
+<div class="hero">
+  <div class="status">● Редакция 3 · проект для утверждения генеральным директором и инвестором · 12.10.2026</div>
+  <h1>Техническое задание: вывод карьера «Зудна» на мощность</h1>
+  <p class="lead">Рабочая программа генерального директора ООО СП «Агротехпром» на 24 месяца. Задание отвечает на три вопроса: что сделать, к какому сроку и как проверить, что сделано. Деньги инвестора тратятся только по этому документу.</p>
+  <p class="meta">Основание: ТЗ «Техника и дорожная карта», редакция 2 от 06.10.2026; финансовая модель v3 от 17.09.2026, пересчитанная 12.10.2026 под решения: цель — ≥15 млн руб. в месяц в среднем за год до налога на прибыль; спрос на глину подтверждён директором; долг 128,3 млн гасится из результата. Бизнес-план — <a href="business-plan.html">соседний файл</a>.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="v">120 <small>тыс. т/мес</small></div><div class="l">Отгрузки с 7-го месяца</div><div class="n">50 щебня + 60 глины + 10 отсева</div></div>
+    <div class="kpi"><div class="v">16,7 <small>млн ₽/мес</small></div><div class="l">Средний денежный результат 2-го года</div><div class="n">200,0 млн за год, после лизинга, до налога на прибыль</div></div>
+    <div class="kpi"><div class="v">47,3 <small>млн ₽</small></div><div class="l">Деньги инвестора по расчёту</div><div class="n">В лимите 50 млн, резерв 2,7 млн</div></div>
+    <div class="kpi"><div class="v">128,3 <small>млн ₽</small></div><div class="l">Старый долг погашен к М24</div><div class="n">7,13 млн в месяц с М7, без кассовых разрывов</div></div>
+  </div>
+</div>
+
+<section id="goal">
+  <h2><span class="num">01</span>Цель и результат</h2>
+  <p class="sub">Карьер работает как предприятие с понятными цифрами: каждый день известно, сколько добыто, отгружено, оплачено и потрачено.</p>
+  <div class="tbl"><table>
+    <tr><th>Показатель</th><th>Срок</th><th class="r">Значение</th><th>Как измеряется</th></tr>
+    <tr><td>Отгрузки всего</td><td>М6</td><td class="r">100 тыс. т/мес</td><td>Сумма весовых накладных за месяц</td></tr>
+    <tr><td>Отгрузки всего</td><td>с М7, сезонный месяц</td><td class="r">120 тыс. т/мес</td><td>То же</td></tr>
+    <tr><td>Щебень известняковый 5–20, 20–40, 40–70</td><td>с М6</td><td class="r">50 тыс. т/мес</td><td>Весы + паспорт партии</td></tr>
+    <tr><td>Глина керамзитовая и кирпичная</td><td>с М7</td><td class="r">60 тыс. т/мес</td><td>Весы + договор покупателя</td></tr>
+    <tr><td>Отсев (мука)</td><td>с М6</td><td class="r">10 тыс. т/мес</td><td>Весы</td></tr>
+    <tr><td>Денежный результат после лизинга, до налога на прибыль</td><td>2-й год</td><td class="r">≥15 млн/мес в среднем (план — 16,7)</td><td>Управленческий отчёт; бухгалтерия сверяет ежемесячно</td></tr>
+    <tr><td>Погашение старых долгов</td><td>М7–М24</td><td class="r">7,13 млн/мес; 128,3 млн всего</td><td>Платёжные поручения и акты сверки с кредиторами</td></tr>
+    <tr><td>Неснижаемый остаток на счёте</td><td>всегда</td><td class="r">≥5 млн</td><td>Банковская выписка</td></tr>
+  </table></div>
+  <div class="note warn">Цены задания: щебень 1 150 ₽/т, глина 380 ₽/т, отсев 300 ₽/т с НДС 22%. Если глина продаётся по 340 ₽/т, результат второго года — 15,0 млн/мес, то есть ровно на границе цели. При 310 ₽/т — 14,7 млн/мес, и то только с зимней отгрузкой щебня 40 тыс. т в месяц. Поэтому цена глины ниже 340 ₽/т без согласия инвестора не допускается (раздел 07).</div>
+</section>
+
+<section id="permits">
+  <h2><span class="num">02</span>Разрешения — до роста объёмов</h2>
+  <p class="sub">План опирается на годовые объёмы, которых нет в ПРГР 2025 (ориентир по глине — 120 тыс. м³ в год). Без согласованного ПРГР 2026 рост глины выше этого уровня запрещён.</p>
+  <div class="tbl"><table>
+    <tr><th>Что</th><th>Нужный объём / результат</th><th>Срок</th><th>Ответственный</th></tr>
+    <tr><td>ПРГР 2026 (план развития горных работ)</td><td>Глина — не менее 400 тыс. м³/год (60 тыс. т/мес при 1,8 т/м³). Известняк — не менее 460 тыс. м³/год (95 тыс. т горной массы в месяц). В модели заложен лимит 650 тыс. м³ по каждому</td><td>Подача — М1, согласование — до М4</td><td>Ответственный за недропользование, маркшейдер</td></tr>
+    <tr><td>Лицензия КЛЖ 80065 ТЭ</td><td>Подтвердить действие по реестру, отсутствие нарушений и предписаний</td><td>до транша 1</td><td>Директор, юрист инвестора</td></tr>
+    <tr><td>ОПО и страхование</td><td>Регистрация действует; полис до 16.04.2027, продление в срок</td><td>до транша 1; продление — март 2027</td><td>Директор</td></tr>
+    <tr><td>Буровзрывные работы</td><td>Договор с лицензированным подрядчиком (121,83 ₽/м³ с НДС), проект массового взрыва, график взрывов</td><td>М1</td><td>Горный инженер</td></tr>
+    <tr><td>Нормативы потерь, НДПИ</td><td>Приказ №910; расчёт НДПИ бухгалтерией по фактической добыче</td><td>М1, далее ежемесячно</td><td>Главный бухгалтер</td></tr>
+    <tr><td>Качество продукции</td><td>Протоколы на щебень (М600–М800) по каждой фракции; паспорт партии глины; сертификат глины до 12.07.2029</td><td>М2, далее ежеквартально</td><td>Начальник ДСК, лаборатория</td></tr>
+    <tr><td>Склады глины и отсева</td><td>Место и вместимость складов в проекте; сейчас подтверждённой ёмкости склада глины нет</td><td>до М7</td><td>Маркшейдер</td></tr>
+  </table></div>
+</section>
+
+<section id="stages">
+  <h2><span class="num">03</span>Этапы и задачи</h2>
+  <p class="sub">Каждая задача имеет срок, ответственного, бюджет и критерий приёмки. Следующий этап открывается, только когда выполнены условия перехода предыдущего.</p>
+
+  <h3>Этап 0. До первого транша</h3>
+  <div class="tbl"><table>
+    <tr><th>№</th><th>Задача</th><th>Ответственный</th><th>Критерий приёмки</th></tr>
+    <tr><td>0.1</td><td>Реестр всех обязательств (128,3 млн по прежнему плану): кредиторы, суммы, сроки, просрочки, исполнительные производства</td><td>Главный бухгалтер</td><td>Таблица со ссылкой на акт сверки по каждому кредитору; график 7,13 млн/мес с М7 согласован с ключевыми кредиторами</td></tr>
+    <tr><td>0.2</td><td>Банковские выписки за 12 месяцев, остатки, ограничения по счетам</td><td>Главный бухгалтер</td><td>Выписки переданы инвестору; аресты и блокировки отсутствуют или описаны</td></tr>
+    <tr><td>0.3</td><td>Налоговая сверка: НДС, НДПИ, налог на прибыль, взносы</td><td>Главный бухгалтер</td><td>Справка ФНС о расчётах; долг включён в реестр 0.1</td></tr>
+    <tr><td>0.4</td><td>Дефектовка всей техники и ДСК; два предложения по крупным ремонтам</td><td>Главный механик</td><td>Ведомость на 9,468 млн подтверждена или уточнена; без двойных строк</td></tr>
+    <tr><td>0.5</td><td>Корпоративные решения: вход инвестора, лимиты платежей, доступ к 1С, счетам, камерам и весам</td><td>Директор, участники</td><td>Подписаны корпоративный договор и порядок согласования платежей</td></tr>
+    <tr><td>0.6</td><td>Заявки покупателей на М1–М3: щебень, глина, отсев</td><td>Коммерческий директор</td><td>Письма или договоры с объёмом, ценой, оплатой (предоплата или в месяце отгрузки)</td></tr>
+  </table></div>
+
+  <h3>Этап 1. Месяц 1 — запуск</h3>
+  <div class="tbl"><table>
+    <tr><th>№</th><th>Задача</th><th>Ответственный</th><th class="r">Бюджет, млн ₽</th><th>Критерий приёмки</th></tr>
+    <tr><td>1.1</td><td>Новая площадка, перенос бытового городка и ремонтного места; аренда 6 бытовок (весовая, охрана, офис, ДСК, две для рабочих)</td><td>Директор, снабжение</td><td class="r">0,45 + аренда</td><td>Все модули подключены (свет, тепло, связь) и не мешают дорогам и погрузке</td></tr>
+    <tr><td>1.2</td><td>Ремонт техники по ведомости (раздел 05)</td><td>Главный механик</td><td class="r">9,47</td><td>Каждая машина испытана под нагрузкой и записана в журнал</td></tr>
+    <tr><td>1.3</td><td>Весовая №1: аванс, площадка, запуск, программа учёта</td><td>Директор, учётчик</td><td class="r">2,38</td><td>Каждая отгрузка: вес → накладная/ТТН → оплата; ручной режим при сбое описан</td></tr>
+    <tr><td>1.4</td><td>Электрозащита, освещение рабочих мест</td><td>Электрик</td><td class="r">1,27</td><td>Акт проверки защит; освещены ДСК, погрузка, весы, дороги</td></tr>
+    <tr><td>1.5</td><td>Связь и видеонаблюдение: не менее 8 точек (въезд, весы и номера, погрузка трёх продуктов, ДСК, топливо, стоянка)</td><td>Директор</td><td class="r">0,55</td><td>По записи сопоставляются машина, время, вес и документ, в том числе ночью</td></tr>
+    <tr><td>1.6</td><td>Ремзона, инструмент, оргтехника (2 ПК, МФУ)</td><td>Главный механик</td><td class="r">0,95</td><td>Текущий ремонт выполняется на месте</td></tr>
+    <tr><td>1.7</td><td>Топливное хозяйство и учёт выдачи по машинам</td><td>Снабжение</td><td class="r">0,60</td><td>Топливо выдаётся по ведомости, расход сверяется с моточасами</td></tr>
+    <tr><td>1.8</td><td>Дороги, водоотвод, разъезды, чистый выезд</td><td>Руководитель участка</td><td class="r">1,50</td><td>Внутренний рейс подачи камня — не более 22 минут</td></tr>
+    <tr><td>1.9</td><td>Аудит, проектирование, допуски; подача ПРГР 2026 на расширенные объёмы</td><td>Ответственный за недропользование</td><td class="r">1,50</td><td>Заявление принято; проект на 400/460 тыс. м³ в работе</td></tr>
+    <tr><td>1.10</td><td>Пост охраны, шлагбаум, журнал въезда</td><td>Директор</td><td class="r">из резерва</td><td>Машина с грузом выезжает только по оформленной отгрузке</td></tr>
+    <tr><td>1.11</td><td>Набор первого состава (27 человек), охрана труда, медосмотры, допуски</td><td>Директор, кадры</td><td class="r">текущие</td><td>Все допущены приказом; инструктажи в журнале</td></tr>
+    <tr><td>1.12</td><td>Вскрыша и первый взрыв по графику горного инженера</td><td>Горный инженер</td><td class="r">текущие</td><td>Подготовленный камень — минимум на месяц работы ДСК вперёд</td></tr>
+    <tr><td>1.13</td><td>Три контрольные смены: взвесить вход ДСК, щебень, отсев; записать простои, топливо, электричество</td><td>Начальник ДСК, учётчик</td><td class="r">—</td><td>Фактический выход щебня (план — 52,5%) и тонны за смену подтверждены весами</td></tr>
+  </table></div>
+  <div class="note"><b>Переход к этапу 2:</b> техника исправна; контрольные смены проведены; ежедневная сверка производства, отгрузок и денег работает; ПРГР 2026 подан.</div>
+
+  <h3>Этап 2. Месяцы 2–3 — убрать остановки, вторая весовая</h3>
+  <div class="tbl"><table>
+    <tr><th>№</th><th>Задача</th><th>Ответственный</th><th class="r">Бюджет, млн ₽</th><th>Критерий приёмки</th></tr>
+    <tr><td>2.1</td><td>Добычной экскаватор 40–50 т на каменный забой: аванс 30% и доставка, остаток — лизинг. Если Hitachi 450 передаётся иначе — эти деньги остаются в резерве</td><td>Директор</td><td class="r">8,10</td><td>Экскаватор принят актом и работает на камне</td></tr>
+    <tr><td>2.2</td><td>Принять Hitachi 450, бульдозер 20 т, 3 самосвала (условия передачи — по договору)</td><td>Главный механик</td><td class="r">по договору</td><td>Акты приёмки; закреплены машинисты</td></tr>
+    <tr><td>2.3</td><td>Малый погрузчик в аренду (340 тыс./мес)</td><td>Снабжение</td><td class="r">0,10 доставка</td><td>Основной погрузчик занят только отгрузкой</td></tr>
+    <tr><td>2.4</td><td><b>Весовая №2</b> и площадки отгрузки, освещение для роста</td><td>Директор</td><td class="r">6,50</td><td>Две весовые работают; полный цикл машины не более 3 минут в пересчёте на поток</td></tr>
+    <tr><td>2.5</td><td>Менеджер по щебню и менеджер по глине; прайс, договоры, окна погрузки</td><td>Коммерческий директор</td><td class="r">текущие</td><td>Заявки на следующий месяц покрывают план</td></tr>
+    <tr><td>2.6</td><td>Выпуск: щебень 12–16 тыс. т, глина 24–28 тыс. т</td><td>Директор</td><td class="r">—</td><td>План месяца выполнен по весам</td></tr>
+  </table></div>
+  <div class="note"><b>Переход к этапу 3:</b> ДСК не простаивает без камня; очереди на весах нет; оплачено не менее 90% отгрузок месяца.</div>
+
+  <h3>Этап 3. Месяц 4 — 18 часов в сутки</h3>
+  <div class="tbl"><table>
+    <tr><th>№</th><th>Задача</th><th>Ответственный</th><th>Критерий приёмки</th></tr>
+    <tr><td>3.1</td><td>ДСК и отгрузка — 18 часов в сутки; машинисты, оператор, учётчик и дежурный слесарь во второй части суток</td><td>Директор</td><td>Сменный график утверждён, люди набраны (38 человек)</td></tr>
+    <tr><td>3.2</td><td>Выпуск: щебень 25, глина 32, отсев 5 тыс. т</td><td>Директор</td><td>План по весам выполнен; простои ДСК меньше 10% времени</td></tr>
+    <tr><td>3.3</td><td>ПРГР 2026 согласован на расширенные объёмы</td><td>Ответственный за недропользование</td><td>Протокол согласования</td></tr>
+  </table></div>
+
+  <h3>Этап 4. Месяцы 5–6 — две смены</h3>
+  <div class="tbl"><table>
+    <tr><th>№</th><th>Задача</th><th>Ответственный</th><th>Критерий приёмки</th></tr>
+    <tr><td>4.1</td><td>Двухсменная работа ДСК (24 ч), отгрузка 18 ч; 45–58 человек</td><td>Директор</td><td>Щебень 35 тыс. т в М5, 50 тыс. т в М6</td></tr>
+    <tr><td>4.2</td><td>Глина — 36–40 тыс. т; договоры с керамзитовыми и кирпичными заводами на 60 тыс. т/мес с М7</td><td>Менеджер по глине</td><td>Договоры с месячными объёмами и ценой не ниже 380 ₽/т (минимум 340 ₽/т с согласия инвестора)</td></tr>
+    <tr><td>4.3</td><td>Место складов глины и отсева в проекте</td><td>Маркшейдер</td><td>Схема складов согласована</td></tr>
+  </table></div>
+  <div class="note"><b>Полная мощность</b> признаётся по итогам месяца, а не одной удачной смены.</div>
+
+  <h3>Этап 5. С месяца 7 — устойчивая работа и погашение долга</h3>
+  <div class="tbl"><table>
+    <tr><th>№</th><th>Задача</th><th>Ответственный</th><th>Критерий приёмки</th></tr>
+    <tr><td>5.1</td><td>120 тыс. т в сезонный месяц: щебень 50, глина 60, отсев 10</td><td>Директор</td><td>Отгрузки по весам; результат ≥15 млн в среднем за 12 месяцев</td></tr>
+    <tr><td>5.2</td><td>Погашение старых долгов 7,13 млн/мес по реестру 0.1</td><td>Главный бухгалтер</td><td>К М24 погашено 128,3 млн; остаток на счёте не ниже 5 млн</td></tr>
+    <tr><td>5.3</td><td>Зима (декабрь–февраль): вскрыша и взрывы впрок, ремонт, запас щебня под весенний спрос; отгрузка — по заявкам</td><td>Директор</td><td>К марту готов камень минимум на 2 месяца работы ДСК</td></tr>
+    <tr><td>5.4</td><td>Мука марки С вместо части отсева; известковый завод — подготовка решения</td><td>Коммерческий директор</td><td>Пробная партия продана; по заводу — пробы и смета</td></tr>
+  </table></div>
+</section>
+
+<section id="norms">
+  <h2><span class="num">04</span>Производственные нормативы по месяцам</h2>
+  <p class="sub">Задание по модели. М1 — первый месяц после транша; в модели М1 — октябрь 2026 года, М15–М16 — зимние месяцы второго года.</p>
+  <div class="tbl"><table>
+    <tr><th>Показатель</th><th class="r">М1</th><th class="r">М2</th><th class="r">М3</th><th class="r">М4</th><th class="r">М5</th><th class="r">М6</th><th class="r">М7–М12</th><th class="r">М13</th><th class="r">М14</th><th class="r">М15</th><th class="r">М16</th><th class="r">М17</th><th class="r">М18</th><th class="r">М19–М24</th></tr>
+    <tr><td>Щебень, тыс. т</td><td class="r">8</td><td class="r">12</td><td class="r">16</td><td class="r">25</td><td class="r">35</td><td class="r">50</td><td class="r">50</td><td class="r">45</td><td class="r">35</td><td class="r">22</td><td class="r">10</td><td class="r">25</td><td class="r">40</td><td class="r">50</td></tr>
+    <tr><td>Глина, тыс. т</td><td class="r">18,8</td><td class="r">24</td><td class="r">28</td><td class="r">32</td><td class="r">36</td><td class="r">40</td><td class="r">60</td><td class="r">60</td><td class="r">60</td><td class="r">27</td><td class="r">24</td><td class="r">60</td><td class="r">60</td><td class="r">60</td></tr>
+    <tr><td>Отсев, тыс. т</td><td class="r">1</td><td class="r">2</td><td class="r">3</td><td class="r">5</td><td class="r">7</td><td class="r">10</td><td class="r">10</td><td class="r">10</td><td class="r">10</td><td class="r">4,7</td><td class="r">10</td><td class="r">10</td><td class="r">10</td><td class="r">10</td></tr>
+    <tr><td>Продажи с НДС, млн ₽</td><td class="r">16,7</td><td class="r">23,5</td><td class="r">29,9</td><td class="r">42,4</td><td class="r">56,0</td><td class="r">75,7</td><td class="r">83,3</td><td class="r">77,6</td><td class="r">66,1</td><td class="r">36,9</td><td class="r">23,9</td><td class="r">54,6</td><td class="r">71,8</td><td class="r">83,3</td></tr>
+    <tr><td>Результат после лизинга, млн ₽</td><td class="r">−2,6</td><td class="r">3,9</td><td class="r">2,9</td><td class="r">6,0</td><td class="r">9,8</td><td class="r">18,4</td><td class="r">19,2–21,5</td><td class="r">18,9</td><td class="r">14,6</td><td class="r">4,8</td><td class="r">1,6</td><td class="r">10,0</td><td class="r">19,7</td><td class="r">19,9–22,7</td></tr>
+  </table></div>
+  <div class="tbl"><table>
+    <tr><th>Узел</th><th>Норматив</th><th>Контроль</th></tr>
+    <tr><td>ДСК</td><td>1 000 т товарного щебня за смену, 2 смены, 28 дней; выход 52,5% от горной массы</td><td>Весы на входе и выходе, сменный рапорт</td></tr>
+    <tr><td>Горная масса</td><td>95 тыс. т/мес; 2–3 взрыва по 42,5 тыс. т (17 тыс. м³ в целике)</td><td>Маркшейдерский замер, акты взрывов</td></tr>
+    <tr><td>Подача камня</td><td>4 самосвала, 22,5 т за рейс, оборот 22 мин</td><td>Время рейса в отчёте диспетчера</td></tr>
+    <tr><td>Весовые (две)</td><td>до 6 мин на машину на каждой; общий поток — до 120 тыс. т/мес</td><td>Журнал весов, очередь в отчёте</td></tr>
+    <tr><td>Отгрузка</td><td>около 170 машин по 25 т в рабочий день при 120 тыс. т/мес; 18 часов в сутки</td><td>Весовые накладные</td></tr>
+    <tr><td>Погрузчик основной</td><td>180 т/ч, только отгрузка щебня и отсева; глину грузят экскаваторы</td><td>Моточасы, простои</td></tr>
+  </table></div>
+</section>
+
+<section id="fleet">
+  <h2><span class="num">05</span>Техника</h2>
+  <div class="grid2">
+    <div class="tbl" style="margin:0"><table>
+      <tr><th>Машина</th><th class="r">Шт.</th><th>Закрепление</th></tr>
+      <tr><td>Hitachi (имеющиеся)</td><td class="r">3</td><td>Глина (2), резерв (1)</td></tr>
+      <tr><td>Добычной экскаватор / Hitachi 450</td><td class="r">1</td><td>Каменный забой</td></tr>
+      <tr><td>Komatsu PC300-7</td><td class="r">1</td><td>Вспомогательный, подмена</td></tr>
+      <tr><td>TATRA, HOWO 6×6 + 3 новых самосвала</td><td class="r">8</td><td>4 — подача камня, остальные — вскрыша, подмена</td></tr>
+      <tr><td>Погрузчик LiuGong CLG862H</td><td class="r">1</td><td>Отгрузка щебня и отсева</td></tr>
+      <tr><td>Малый погрузчик (аренда)</td><td class="r">1</td><td>Уборка, вспомогательные работы</td></tr>
+      <tr><td>ДЭТ-250М2 + бульдозер 20 т</td><td class="r">2</td><td>Площадки, дороги, отвалы</td></tr>
+      <tr><td>Кировец, ЗИЛ-131, ЗИЛ со щёткой, гидромолот</td><td class="r">4</td><td>Дороги, топливо, чистка, негабарит</td></tr>
+    </table></div>
+    <div class="tbl" style="margin:0"><table>
+      <tr><th>Ремонт имеющейся техники</th><th class="r">Тыс. ₽</th></tr>
+      <tr><td>TATRA: передний мост, пневматика, АКБ</td><td class="r">958</td></tr>
+      <tr><td>Hitachi №1: ходовая, скальный ковш 2,7 м³, подшипник поворотного круга</td><td class="r">4 540</td></tr>
+      <tr><td>Hitachi №2: гидронасосы</td><td class="r">1 200</td></tr>
+      <tr><td>Hitachi №3: бортовая передача</td><td class="r">350</td></tr>
+      <tr><td>Komatsu: насосы</td><td class="r">900</td></tr>
+      <tr><td>ДЭТ: АКБ</td><td class="r">120</td></tr>
+      <tr><td>Масла, смазки, фильтры</td><td class="r">1 400</td></tr>
+      <tr class="total"><td>Итого</td><td class="r">9 468</td></tr>
+    </table></div>
+  </div>
+  <p style="margin-top:12px">TATRA за 2,5 млн, второй большой погрузчик, модернизация ДСК (25 млн) и ремонтный бокс (27 млн) в задание не входят. Их можно добавить только после замеров и отдельным решением инвестора. Расчёт модели показал: модернизация ДСК до 1 500 т за смену без роста сбыта ухудшает результат.</p>
+</section>
+
+<section id="people">
+  <h2><span class="num">06</span>Люди</h2>
+  <div class="tbl"><table>
+    <tr><th>Роль</th><th class="r">М1</th><th class="r">М6</th><th>Комментарий</th></tr>
+    <tr><td>Управление (директор, руководители участков, бухгалтерия, снабжение, продажи)</td><td class="r">10</td><td class="r">10</td><td>По штатному расписанию; совмещения не считаются новыми людьми</td></tr>
+    <tr><td>Машинисты экскаваторов (камень + глина)</td><td class="r">3</td><td class="r">7</td><td>Отдельно камень и глина</td></tr>
+    <tr><td>Водители подачи камня</td><td class="r">4</td><td class="r">15</td><td>Две смены и подмена</td></tr>
+    <tr><td>Операторы и рабочие ДСК</td><td class="r">3</td><td class="r">12</td><td>Оператор — 5 человек при 24 часах</td></tr>
+    <tr><td>Машинисты погрузчиков</td><td class="r">2</td><td class="r">5</td><td>Большой и малый</td></tr>
+    <tr><td>Слесари</td><td class="r">2</td><td class="r">4</td><td>Дежурство во второй смене</td></tr>
+    <tr><td>Весовые и диспетчер</td><td class="r">2</td><td class="r">4+</td><td>С весовой №2 — дополнительные учётчики</td></tr>
+    <tr><td>Уборка</td><td class="r">1</td><td class="r">1</td><td></td></tr>
+    <tr class="total"><td>Всего</td><td class="r">27</td><td class="r">58</td><td>Охрана — по договору или 5 человек</td></tr>
+  </table></div>
+</section>
+
+<section id="sales">
+  <h2><span class="num">07</span>Продажи</h2>
+  <div class="tbl"><table>
+    <tr><th>Продукт</th><th class="r">Объём с М7</th><th class="r">Цена с НДС</th><th>Покупатели</th><th>Условия</th></tr>
+    <tr><td>Щебень М600–М800</td><td class="r">50 тыс. т/мес</td><td class="r">1 150 ₽/т</td><td>Дорожники, бетонные заводы, стройкомпании</td><td>Предоплата или оплата в месяце отгрузки</td></tr>
+    <tr><td>Глина</td><td class="r">60 тыс. т/мес</td><td class="r">380 ₽/т (минимум 340)</td><td>Керамзитовые и кирпичные заводы</td><td>Годовые договоры с месячными объёмами</td></tr>
+    <tr><td>Отсев / мука</td><td class="r">10 тыс. т/мес</td><td class="r">300 ₽/т</td><td>ВК ХАРВЕСТЕРС, сельхозпокупатели</td><td>Годовой договор</td></tr>
+  </table></div>
+  <ul class="clean">
+    <li>К 25-му числу каждого месяца — реестр заявок на следующий месяц. Без заявок выпуск на склад не растёт.</li>
+    <li>Отсрочка платежа больше 14 дней — только с согласия инвестора. Если половина покупателей платит через месяц, потребность в деньгах растёт примерно на 12 млн.</li>
+    <li>Один конечный покупатель не учитывается дважды — напрямую и через посредника.</li>
+  </ul>
+</section>
+
+<section id="budget">
+  <h2><span class="num">08</span>Единая смета 50 млн рублей</h2>
+  <p class="sub">Одна строка — одна покупка. Смета сведена из модели и ТЗ редакции 2, без двойного счёта. Вскрыша, взрывы, топливо, зарплата и лизинг — текущие расходы. Их оплачивают оборотные деньги и поступления от продаж.</p>
+  <div class="tbl"><table>
+    <tr><th>Статья</th><th class="r">Млн ₽</th><th>Месяц</th><th>Задача</th></tr>
+    <tr><td>Ремонт имеющейся техники</td><td class="r">9,47</td><td>М1</td><td>1.2</td></tr>
+    <tr><td>Добычной экскаватор: аванс 30% и доставка</td><td class="r">8,10</td><td>М2</td><td>2.1</td></tr>
+    <tr><td>Весовая №1</td><td class="r">2,38</td><td>М1</td><td>1.3</td></tr>
+    <tr><td>Весовая №2, площадки отгрузки и освещение роста</td><td class="r">6,50</td><td>М3</td><td>2.4</td></tr>
+    <tr><td>Электрозащита и освещение рабочих мест</td><td class="r">1,27</td><td>М1</td><td>1.4</td></tr>
+    <tr><td>Связь и видеонаблюдение</td><td class="r">0,55</td><td>М1</td><td>1.5</td></tr>
+    <tr><td>Ремзона, инструмент, оргтехника</td><td class="r">0,95</td><td>М1</td><td>1.6</td></tr>
+    <tr><td>Топливное хозяйство</td><td class="r">0,60</td><td>М1</td><td>1.7</td></tr>
+    <tr><td>Дороги и природоохранный старт</td><td class="r">1,50</td><td>М1</td><td>1.8</td></tr>
+    <tr><td>Аудит, проектирование, допуски, ПРГР 2026</td><td class="r">1,50</td><td>М1</td><td>1.9</td></tr>
+    <tr><td>Бытовки и доставка погрузчика</td><td class="r">0,45</td><td>М1–М2</td><td>1.1, 2.3</td></tr>
+    <tr class="total"><td>Прямые пусковые платежи</td><td class="r">33,27</td><td></td><td></td></tr>
+    <tr><td>Непредвиденные расходы, 15%</td><td class="r">4,99</td><td>М1–М3</td><td>Охрана, шлагбаум, мебель — отсюда</td></tr>
+    <tr><td>Оборотные деньги и налоговый запас</td><td class="r">9,01</td><td>с запуска</td><td>Неснижаемый остаток 5 млн</td></tr>
+    <tr class="total"><td>Расчётная потребность (модель)</td><td class="r">47,27</td><td></td><td></td></tr>
+    <tr><td>Резерв до лимита</td><td class="r">2,73</td><td>по решению</td><td>Срочные платежи кредиторам до М7, если без них нельзя работать</td></tr>
+    <tr class="total"><td>Лимит инвестора</td><td class="r">50,00</td><td></td><td></td></tr>
+  </table></div>
+  <div class="grid3">
+    <div class="card"><h3>Транш 1 — 41,2 млн</h3><p>М1: пусковые платежи и оборотные деньги до первых поступлений.</p></div>
+    <div class="card"><h3>Транш 2 — 3,6 млн</h3><p>М2: экскаватор и переходящие платежи.</p></div>
+    <div class="card"><h3>Транш 3 — 2,5 млн</h3><p>М3: весовая №2 и закрытие пика потребности.</p></div>
+  </div>
+  <div class="note warn"><b>Чем эта смета отличается от ТЗ редакции 2.</b> Вскрыша 9 млн, взрывы 4 млн и ГСМ 4 млн — это текущие расходы, они уже есть в помесячном плане. Перевод земель (5 млн) для плана не нужен: добыча идёт на промышленных участках 1 и 2, поэтому перевод — второй этап, из результата. Срочный долг (5 млн) входит в общий график погашения 128,3 млн. TATRA (2,5 млн) — только по замерам. Вторая весовая добавлена: без неё 60 тыс. т глины не отгрузить.</div>
+</section>
+
+<section id="debt">
+  <h2><span class="num">09</span>Погашение старых долгов</h2>
+  <p class="sub">Решение собственника: долги 128,3 млн гасятся из денежного результата по мере его появления. Модель проверила график: денег хватает каждый месяц, налоговый резерв и неснижаемый остаток 5 млн сохраняются.</p>
+  <div class="tbl"><table>
+    <tr><th>Период</th><th class="r">Платёж в месяц</th><th class="r">Накопленно</th><th class="r">Деньги на конец периода</th></tr>
+    <tr><td>М1–М6</td><td class="r">0</td><td class="r">0</td><td class="r">71,2 млн (М6)</td></tr>
+    <tr><td>М7–М12</td><td class="r">7,13 млн</td><td class="r">42,8 млн</td><td class="r">134,9 млн (М12)</td></tr>
+    <tr><td>М13–М18</td><td class="r">7,13 млн</td><td class="r">85,6 млн</td><td class="r">127,9 млн (М18)</td></tr>
+    <tr><td>М19–М24</td><td class="r">7,13 млн</td><td class="r">128,3 млн</td><td class="r">197,9 млн (М24)</td></tr>
+  </table></div>
+  <p>Очерёдность: налоги и исполнительные производства, затем кредиторы, без которых нельзя работать (энергия, лизинг, ГСМ), затем остальные. Реестр и очерёдность утверждает инвестор (задача 0.1). Если кредитор требует оплаты раньше М7, платёж идёт из резерва 2,73 млн. Ниже 5 млн остаток на счёте не опускается.</p>
+</section>
+
+<section id="control">
+  <h2><span class="num">10</span>Контроль и отчётность</h2>
+  <div class="tbl"><table>
+    <tr><th>Отчёт</th><th>Когда</th><th>Содержание</th></tr>
+    <tr><td>Ежедневный</td><td>до 10:00</td><td>Добыто, произведено, отгружено по продуктам; поступившие деньги; работа и простои каждой машины; время рейса, погрузки и весов; топливо, электричество, склады; план на завтра</td></tr>
+    <tr><td>Еженедельный</td><td>понедельник</td><td>Выписка банка, платежи по смете, реестр заявок, отклонения от плана и меры</td></tr>
+    <tr><td>Ежемесячный</td><td>до 10-го числа</td><td>Результат после лизинга против плана; погашение долга; НДПИ и налоги; маркшейдерский замер; прогноз на 3 месяца</td></tr>
+  </table></div>
+  <ul class="clean">
+    <li>Каждый платёж из средств инвестора — только по строке сметы раздела 08. Перенос между строками — с письменного согласия инвестора.</li>
+    <li>Инвестор видит 1С, банк, записи весов и камер в любой момент.</li>
+    <li>Без согласия инвестора запрещены новые кредиты, залоги, поручительства и сделки с аффилированными лицами.</li>
+  </ul>
+</section>
+
+<section id="stop">
+  <h2><span class="num">11</span>Когда тормозим рост</h2>
+  <div class="tbl"><table>
+    <tr><th>Сигнал</th><th>Действие</th></tr>
+    <tr><td>Нет оплаченных заявок на следующий месяц</td><td>Следующая ступень объёма откладывается; производство на склад не растёт</td></tr>
+    <tr><td>Выход щебня ниже 45% на контрольных сменах</td><td>Пересчёт плана; поиск причины (дробление, грохот, сырьё) до роста смен</td></tr>
+    <tr><td>ПРГР 2026 не согласован к М4</td><td>Глина — не выше разрешённого объёма; щебень — по плану; цель пересчитывается</td></tr>
+    <tr><td>Средняя цена щебня за месяц ниже 1 100 ₽/т с НДС</td><td>Пересчёт плана с инвестором; при рыночных ценах (1 050 / 310) результат — около 10 млн в месяц, график долга удлиняется</td></tr>
+    <tr><td>Цена глины ниже 340 ₽/т</td><td>Пересмотр плана с инвестором; зимняя отгрузка щебня ≥40 тыс. т/мес как компенсация</td></tr>
+    <tr><td>Свободный остаток ниже 5 млн</td><td>Стоп необязательных платежей, перенос графика долга</td></tr>
+    <tr><td>Результат двух месяцев подряд ниже плана более чем на 30%</td><td>Совещание с инвестором, план исправления за 10 дней</td></tr>
+  </table></div>
+</section>
+
+<section id="accept">
+  <h2><span class="num">12</span>Приёмка выполнения</h2>
+  <ul class="check">
+    <li>Этап 1 принят: техника исправна, весовая №1 и учёт работают, три контрольные смены проведены, ПРГР 2026 подан.</li>
+    <li>Этап 2 принят: работают экскаватор на камне и весовая №2, заявки покрывают план.</li>
+    <li>Этап 3 принят: 18 часов работы, ПРГР 2026 согласован.</li>
+    <li>Этап 4 принят: 100 тыс. т за М6 по весам, договоры на 60 тыс. т глины в месяц.</li>
+    <li>Этап 5 принят: за 12 месяцев средний результат ≥15 млн/мес до налога на прибыль, долг гасится по графику.</li>
+  </ul>
+  <p style="margin-top:16px">Утверждаю: генеральный директор ООО СП «Агротехпром» ______________ А. Ю. Стеценко &nbsp;&nbsp; Согласовано: инвестор ______________ &nbsp;&nbsp; Дата ____________</p>
+</section>
+
+<footer>ТЗ, редакция 3 от 12.10.2026. Цифры — финансовая модель v3, пересчитанная её собственным движком формул под сценарий «вторая весовая + 60 тыс. т глины + график долга» (лист «01 Итог», «09 Инвестор», проверки модели без ошибок). Проект: проверяет ответственный сотрудник и утверждает генеральный директор.</footer>
+</main>
+<script>
+(function(){var root=document.documentElement,btn=document.getElementById('theme');try{var t=localStorage.getItem('bp-theme');if(t)root.setAttribute('data-theme',t);}catch(e){}
+btn.addEventListener('click',function(){var cur=root.getAttribute('data-theme');var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;var next=dark?'light':'dark';root.setAttribute('data-theme',next);try{localStorage.setItem('bp-theme',next);}catch(e){}});})();
+</script>
+</body>
+</html>

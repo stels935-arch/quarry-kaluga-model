@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Карьер Зудна — бизнес-план</title>
+<meta name="description" content="Бизнес-план развития карьера «Зудна» (Марухтинское-2, Калужская область): 50 млн руб. инвестиций, выход на 100 тыс. т в месяц и рабочее ТЗ директора.">
+<style>
+:root{
+  --bg:#f6f5f2; --surface:#ffffff; --surface-2:#fcfcfb; --line:#e3e1dc; --line-2:#cfccc5;
+  --text:#14130f; --text-2:#52514e; --muted:#7a7873;
+  --accent:#2a78d6; --accent-soft:#e8f1fc; --accent-ink:#174f94;
+  --good:#0a7d0a; --good-soft:#e7f5e7; --warn:#8a5a00; --warn-soft:#fdf3dc; --bad:#b3261e; --bad-soft:#fbe9e7;
+  --bar:#2a78d6; --bar-neg:#9a9893; --grid:#ebe9e4;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 2px 8px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121211; --surface:#1a1a19; --surface-2:#1f1f1e; --line:#2f2f2d; --line-2:#3d3d3a;
+    --text:#f4f3ef; --text-2:#c3c2b7; --muted:#97958d;
+    --accent:#3987e5; --accent-soft:#1b2a3d; --accent-ink:#9cc4f5;
+    --good:#5fcf5f; --good-soft:#1b2e1b; --warn:#f0c060; --warn-soft:#33290f; --bad:#f2867e; --bad-soft:#3a1d1b;
+    --bar:#3987e5; --bar-neg:#6d6c67; --grid:#2a2a28; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121211; --surface:#1a1a19; --surface-2:#1f1f1e; --line:#2f2f2d; --line-2:#3d3d3a;
+  --text:#f4f3ef; --text-2:#c3c2b7; --muted:#97958d;
+  --accent:#3987e5; --accent-soft:#1b2a3d; --accent-ink:#9cc4f5;
+  --good:#5fcf5f; --good-soft:#1b2e1b; --warn:#f0c060; --warn-soft:#33290f; --bad:#f2867e; --bad-soft:#3a1d1b;
+  --bar:#3987e5; --bar-neg:#6d6c67; --grid:#2a2a28; --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;gap:16px;align-items:center;height:52px}
+.brand{font-weight:700;white-space:nowrap}
+nav.toc{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+nav.toc::-webkit-scrollbar{display:none}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--text-2);font-size:14px;padding:6px 10px;border-radius:8px}
+nav.toc a:hover{background:var(--surface);color:var(--text)}
+.theme{border:1px solid var(--line-2);background:var(--surface);color:var(--text-2);border-radius:8px;padding:5px 9px;font-size:13px;cursor:pointer}
+.hero{padding:40px 0 16px}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--warn);background:var(--warn-soft);border-radius:999px;padding:4px 12px;margin-bottom:14px}
+h1{font-size:clamp(28px,4.4vw,44px);line-height:1.12;margin:0 0 12px;letter-spacing:-.01em}
+.lead{font-size:19px;color:var(--text-2);max-width:820px;margin:0}
+.meta{color:var(--muted);font-size:14px;margin-top:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 8px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.kpi .v{font-size:30px;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.kpi .v small{font-size:16px;font-weight:600;color:var(--text-2)}
+.kpi .l{color:var(--text-2);font-size:14px;margin-top:6px}
+.kpi .n{color:var(--muted);font-size:12.5px;margin-top:6px}
+section{padding:36px 0 8px;border-top:1px solid var(--line);margin-top:28px}
+section>h2{font-size:clamp(22px,3vw,30px);margin:0 0 6px;letter-spacing:-.01em}
+.num{color:var(--accent);font-weight:700;margin-right:10px}
+.sub{color:var(--text-2);margin:0 0 20px;max-width:860px}
+h3{font-size:19px;margin:26px 0 10px}
+p{margin:0 0 12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kpis>*,.grid2>*,.grid3>*,.land>*,.flow>*,.gallery>*,.videos>*{min-width:0}
+.kpi .l,.kpi .n,.card{overflow-wrap:anywhere}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.card p:last-child,.card ul:last-child{margin-bottom:0}
+ul.clean{padding-left:20px;margin:0 0 12px}
+ul.clean li{margin:4px 0}
+.note{border-left:3px solid var(--accent);background:var(--accent-soft);padding:12px 16px;border-radius:0 10px 10px 0;margin:16px 0;color:var(--text)}
+.note.warn{border-color:var(--warn);background:var(--warn-soft)}
+.note.bad{border-color:var(--bad);background:var(--bad-soft)}
+.note.good{border-color:var(--good);background:var(--good-soft)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:12px 0 16px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);color:var(--text-2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700;background:var(--surface-2)}
+.pill{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:var(--good-soft);color:var(--good)}
+.pill.chk{background:var(--warn-soft);color:var(--warn)}
+.pill.no{background:var(--bad-soft);color:var(--bad)}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:12px 0 18px}
+.step{background:var(--surface);border:1px solid var(--line);padding:16px;position:relative}
+.step:first-child{border-radius:14px 0 0 14px}
+.step:last-child{border-radius:0 14px 14px 0}
+.step+.step{border-left:0}
+.step b{display:block;font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.step .t{font-weight:700;font-size:17px;margin-bottom:6px}
+.step p{font-size:14.5px;color:var(--text-2);margin:0}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 16px 8px;margin:12px 0 16px;position:relative}
+.chart .ct{font-weight:600;margin-bottom:2px}
+.chart .cs{color:var(--muted);font-size:13px;margin-bottom:8px}
+.chart svg{display:block;width:100%;height:auto}
+.chart text{fill:var(--text-2);font-size:11px;font-family:inherit}
+.tip{position:absolute;pointer-events:none;background:var(--text);color:var(--bg);font-size:13px;padding:6px 9px;border-radius:8px;white-space:nowrap;opacity:0;transition:opacity .1s;transform:translate(-50%,-110%)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--surface-2)}
+.gallery figcaption{font-size:13px;color:var(--text-2);padding:8px 10px}
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.videos figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.videos video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.videos figcaption{font-size:13px;color:var(--text-2);padding:8px 10px}
+.land{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}
+.land img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.gate{display:grid;grid-template-columns:110px 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);margin:10px 0}
+.gate .m{background:var(--accent-soft);color:var(--accent-ink);font-weight:700;padding:14px;display:flex;flex-direction:column;justify-content:center}
+.gate .m small{font-weight:500;color:var(--text-2)}
+.gate .b{padding:14px 16px}
+.gate .b p{margin:0 0 6px}
+.gate .b .cond{font-size:14px;color:var(--text-2)}
+.check li{list-style:none;position:relative;padding-left:26px;margin:6px 0}
+.check{padding-left:0}
+.check li:before{content:"";position:absolute;left:2px;top:5px;width:14px;height:14px;border:1.5px solid var(--line-2);border-radius:4px}
+footer{margin:48px 0 0;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+@media (max-width:860px){
+  .kpis{grid-template-columns:1fr 1fr}
+  .grid2,.grid3,.land{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .videos{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .step,.step:first-child,.step:last-child{border-radius:0}
+  .step+.step{border-left:1px solid var(--line);border-top:0}
+  .step:first-child{border-radius:14px 14px 0 0}.step:last-child{border-radius:0 0 14px 14px}
+  .brand{display:none}
+  .gate{grid-template-columns:1fr}
+}
+@media print{
+  header.top,.theme{display:none}
+  body{background:#fff}
+  section{break-inside:auto}
+  .card,.tbl,.chart,.gate{break-inside:avoid}
+  video{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">Карьер «Зудна»</div>
+  <nav class="toc" aria-label="Разделы">
+    <a href="#summary">Резюме</a><a href="#asset">Актив</a><a href="#facts">Факты</a><a href="#market">Рынок</a><a href="#money">50 млн</a><a href="#ramp">Выход на мощность</a><a href="#profit">15 млн</a><a href="#tz">ТЗ директора</a><a href="#docs">Документы</a><a href="#media">Фото и видео</a><a href="#growth">Развитие</a><a href="#risks">Риски</a><a href="#investor">Инвестору</a><a href="#sources">Источники</a><a href="tz.html">ТЗ →</a><a href="neighbors.html">Соседние карьеры →</a>
+  </nav>
+  <button class="theme" id="theme" type="button" aria-label="Сменить тему">◐</button>
+</div></header>
+
+<main class="wrap">
+
+<div class="hero">
+  <div class="status">● Проект для согласования с генеральным директором · 12.10.2026</div>
+  <h1>Бизнес-план развития карьера «Зудна» на 50 млн рублей</h1>
+  <p class="lead">Действующий карьер известняка и керамзитовой глины в Калужской области. Ниже — план генерального директора: за шесть месяцев вывести карьер на 100 тыс. т отгрузок в месяц, с седьмого — на 120 тыс. т и держать денежный результат не ниже 15 млн руб. в месяц в среднем за год. Из этого результата гасятся старые долги. К плану приложены рабочее ТЗ, разрешительные документы, фото и видео с объекта и сравнение с соседними карьерами.</p>
+  <p class="meta">ООО СП «Агротехпром» (ИНН 4020005533) · месторождение Марухтинское-2, Ферзиковский район, д. Зудна · генеральный директор А. Ю. Стеценко · расчёты — по финансовой модели v3 от 17.09.2026 и ТЗ v2 от 06.10.2026</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">50 <small>млн ₽</small></div><div class="l">Лимит инвестора</div><div class="n">Расчётная потребность — 47,27 млн, ещё 2,73 млн — резерв</div></div>
+    <div class="kpi"><div class="v">120 <small>тыс. т/мес</small></div><div class="l">Отгрузки с 7-го месяца</div><div class="n">50 тыс. т щебня, 60 тыс. т глины, 10 тыс. т отсева; в М6 — 100 тыс. т</div></div>
+    <div class="kpi"><div class="v">83,3 <small>млн ₽</small></div><div class="l">Продажи в месяц с НДС на полной мощности</div><div class="n">68,3 млн без НДС (НДС 22%)</div></div>
+    <div class="kpi"><div class="v">16,7 <small>млн ₽/мес</small></div><div class="l">Результат в среднем за 2-й год</div><div class="n">200 млн за год, после лизинга, до налога на прибыль. Цель — ≥15 млн</div></div>
+  </div>
+</div>
+
+<!-- 1 -->
+<section id="summary">
+  <h2><span class="num">01</span>Резюме</h2>
+  <p class="sub">Карьер уже работает и продаёт глину. Расти мешает не отсутствие сырья или документов, а нехватка оборотных денег на вскрышу, взрывы и ремонт техники. 50 млн руб. закрывают именно этот разрыв.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Что есть сегодня</h3>
+      <ul class="clean">
+        <li><b>Лицензия КЛЖ 80065 ТЭ</b> на известняк и керамзитовую глину. По копиям срок — до 01.01.2029.</li>
+        <li><b>Запасы:</b> 85,4 млн т известняка категорий A+B+C1 (остаток на 01.04.2026). Глины керамзитовой — около 2 млн м³ (оценка директора).</li>
+        <li><b>Продажи идут:</b> 205 тыс. т глины в 2025 году (62,4 млн руб. с НДС), 130 тыс. т за январь–август 2026.</li>
+        <li><b>Дробильно-сортировочный комплекс (ДСК)</b> поставлен в 2025 году, переработал около 15 тыс. т. Работа остановилась: нет вскрытых площадей под взрывы и денег на переработку.</li>
+        <li><b>Техника:</b> 3 Hitachi, Komatsu, самосвалы TATRA и HOWO, погрузчик LiuGong, бульдозер, Кировец. Часть парка требует ремонта на 9,47 млн руб.</li>
+        <li><b>Инфраструктура:</b> КТП-630, два газовых отвода DN100 у границы участков, 8 земельных участков общей площадью 287,6 га (по схеме).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Что даст инвестиция</h3>
+      <ul class="clean">
+        <li>Ремонт техники и запуск ДСК в первый месяц. Весы, связь, видеонаблюдение и учёт каждой отгрузки.</li>
+        <li>Вскрыша и буровзрывные работы. Готовый каменный фронт для непрерывной работы ДСК.</li>
+        <li>Поэтапный рост: 28 тыс. т в первый месяц, 100 тыс. т в шестой. Вторая смена — только под оплаченные заказы.</li>
+        <li>Денежный результат после лизинга — 18,4 млн руб. на шестом месяце. В среднем за второй год — 16,7 млн в месяц (200 млн за год) при второй весовой и продаже всей вынутой глины (раздел 07).</li>
+        <li>Из результата за 18 месяцев гасятся старые долги 128,3 млн. Капитал инвестора 47,27 млн возвращается из денег проекта к 24-му месяцу; сверх капитала инвестору предлагается доля (раздел 13).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note warn"><b>Как читать цифры.</b> Все прогнозы — расчёт финансовой модели, а не достигнутый результат. «Денежный результат» в модели — выручка без НДС минус все текущие затраты, включая вскрышу, налог на добычу полезных ископаемых (НДПИ) и лизинг, до налога на прибыль. Это не бухгалтерская прибыль и не EBITDA. Месяцы М1–М24 считаются от первого транша. В модели М1 — октябрь 2026 года.</div>
+</section>
+
+<!-- 2 -->
+<section id="asset">
+  <h2><span class="num">02</span>Актив: месторождение, земля, инфраструктура</h2>
+  <p class="sub">Комплексное месторождение: сверху керамзитовая глина, ниже — строительный известняк. Вскрыша на две трети полезная: снятую глину продают, а не везут в отвал.</p>
+
+  <h3>Запасы известняка на 01.04.2026</h3>
+  <div class="tbl"><table>
+    <tr><th>Категория</th><th class="r">Северная площадь, тыс. т</th><th class="r">Южная площадь, тыс. т</th><th class="r">Всего, тыс. т</th><th class="r">Всего, тыс. м³</th></tr>
+    <tr><td>A</td><td class="r">2 023,6</td><td class="r">3 781,9</td><td class="r">5 805,4</td><td class="r">2 700,2</td></tr>
+    <tr><td>B</td><td class="r">8 335,4</td><td class="r">15 172,6</td><td class="r">23 508,0</td><td class="r">10 934,0</td></tr>
+    <tr><td>C1</td><td class="r">43 177,6</td><td class="r">12 925,8</td><td class="r">56 103,4</td><td class="r">26 094,6</td></tr>
+    <tr class="total"><td>A+B+C1</td><td class="r">53 536,6</td><td class="r">31 880,2</td><td class="r">85 416,8</td><td class="r">39 728,8</td></tr>
+  </table></div>
+  <p style="color:var(--text-2);font-size:14.5px">Источник — справка «Балансовые запасы» из папки карьера. В справке нет названия месторождения. Её надо сверить с формами 5-ГР за 2025 год и протоколами ЭКЗ №109 и ТКЗ №196. Директор называет и другие цифры: на текущем горном отводе 11,5 млн м³ балансового известняка марок М600–М800 и 7,5 млн м³ забалансового М1000 (Алексинский горизонт, сухой). При плане 50 тыс. т щебня в месяц (около 95 тыс. т горной массы) даже меньшей из оценок хватает на многие годы. Расчёт обеспеченности сделает маркшейдер.</p>
+
+  <h3>Разрез: что лежит в забое</h3>
+  <div class="tbl"><table>
+    <tr><th>Слой (сверху вниз)</th><th>Мощность</th><th>Куда идёт</th></tr>
+    <tr><td>Кирпичные суглинки</td><td>6–8 м</td><td>В отвал</td></tr>
+    <tr><td>Вишнёвая керамзитовая глина</td><td>до 8–10 м</td><td>Продажа керамзитовым заводам (по словам директора — КЗКГ, АКЗ, Рязань, Серпухов). Сертификат на 13.07.2026–12.07.2029</td></tr>
+    <tr><td>Тёмно-серая «кирпичная» глина</td><td>около 2 м</td><td>Продажа кирпичным заводам</td></tr>
+    <tr><td>Серо-зелёная глина на подошве</td><td>0,2–0,5 м</td><td>В отвал (кальций, сера)</td></tr>
+    <tr><td>Известняк М600–М800</td><td>основная толща</td><td>Буровзрывные работы → ДСК → щебень 5–20, 20–40, 40–70, отсев, мука</td></tr>
+    <tr><td>Известняк М1000 (забалансовый)</td><td>ниже</td><td>Резерв на будущее; вода — на 80–82 м</td></tr>
+  </table></div>
+
+  <h3>Земля и инфраструктура</h3>
+  <div class="land">
+    <figure style="margin:0">
+      <img src="https://stels935-arch.github.io/quarry-kaluga-model/investor-65m-2026-10-04/assets/land/land-parcels.jpg" alt="Схема восьми земельных участков карьера" loading="lazy">
+      <figcaption style="font-size:13px;color:var(--muted);margin-top:6px">Схема восьми участков из описания 2025 года. Номера 1–8 — номера схемы, а не кадастровые.</figcaption>
+    </figure>
+    <div class="tbl" style="margin:0"><table>
+      <tr><th>№</th><th class="r">Га</th><th>Назначение по схеме</th></tr>
+      <tr><td>1</td><td class="r">38,0</td><td>Промышленная; сейчас добыча глины и щебня</td></tr>
+      <tr><td>2</td><td class="r">14,0</td><td>Промышленная</td></tr>
+      <tr><td>3</td><td class="r">46,5</td><td>Отвалы пустых пород</td></tr>
+      <tr><td>4</td><td class="r">26,8</td><td>ДСК и склады</td></tr>
+      <tr><td>5</td><td class="r">88,5</td><td>Сельхозназначение, развитие</td></tr>
+      <tr><td>6</td><td class="r">33,9</td><td>Сельхозназначение; у границы два газовых отвода</td></tr>
+      <tr><td>7</td><td class="r">21,2</td><td>Сельхозназначение, развитие</td></tr>
+      <tr><td>8</td><td class="r">18,7</td><td>Сельхозназначение, развитие</td></tr>
+      <tr class="total"><td>Всего</td><td class="r">287,6</td><td></td></tr>
+    </table></div>
+  </div>
+  <p style="margin-top:12px">Электроснабжение: КТП-630/10/0,4 и КТП-250 (мощность 630 кВА — это не 630 кВт; доступную мощность подтверждает договор). Газ: два отвода DN100 для перспективного подключения. При строительстве директору устно подтвердили лимит 1 000 м³/ч, но технических условий пока нет. Вода: скважины нет, водоносный горизонт на 82 м. До бурения скважины воду подвозят.</p>
+</section>
+
+<!-- 3 -->
+<section id="facts">
+  <h2><span class="num">03</span>Что уже работает: фактические продажи</h2>
+  <p class="sub">Цифры из учётных таблиц предприятия, публичные копии которых проверены. От них считается рост. Это не прогноз.</p>
+  <div class="tbl"><table>
+    <tr><th>Продукт и период</th><th class="r">Тонн</th><th class="r">Выручка с НДС, млн ₽</th><th class="r">Средняя цена, ₽/т</th><th class="r">В среднем за месяц, т</th></tr>
+    <tr><td>Глина, январь–декабрь 2025</td><td class="r">205 270</td><td class="r">62,37</td><td class="r">304</td><td class="r">17 100</td></tr>
+    <tr><td>Глина, январь–август 2026</td><td class="r">129 816</td><td class="r">40,52</td><td class="r">312</td><td class="r">16 200</td></tr>
+    <tr><td>Щебень, январь–октябрь 2025</td><td class="r">19 772</td><td class="r">16,51</td><td class="r">835</td><td class="r">2 000</td></tr>
+  </table></div>
+  <div class="note"><b>Вывод для инвестора.</b> Глину карьер стабильно продаёт по 16–17 тыс. т в месяц, у этого продукта есть рынок и покупатели. Щебень почти не продавался: ДСК запустили в 2025 году, но без готового каменного фронта и оборотных денег он простаивал. Главный прирост выручки даст именно щебень: 50 тыс. т в месяц по модели против 2 тыс. т в 2025 году. Поэтому план начинается со вскрыши, взрывов и ремонта, а продажи щебня растут ступенями.</div>
+  <p style="font-size:14.5px;color:var(--text-2)">Оговорки: августовская цена глины 2026 года (305 ₽/т) в таблице условная. Ноябрь и декабрь 2025 года по щебню не заполнены. Полная бухгалтерская отчётность и сверка обязательств ещё не представлены (раздел 12).</p>
+</section>
+
+<!-- 4 -->
+<section id="market">
+  <h2><span class="num">04</span>Рынок, цены и покупатели</h2>
+  <p class="sub">Цены модели не выше текущих цен ближайшего крупного конкурента. Продавать придётся на конкурентном рынке, поэтому решают качество, стабильность фракций и скорость отгрузки.</p>
+  <div class="tbl"><table>
+    <tr><th>Продукт</th><th class="r">Цена в модели, ₽/т с НДС</th><th>Ориентир рынка</th><th>Кому продаём</th></tr>
+    <tr><td>Щебень известняковый 5–20, 20–40, 40–70</td><td class="r">1 150</td><td>«Восточные Берники», сайт на 12.10.2026: М600 5–20 — 1 170; 20–40 — 1 230; 40–70 — 1 200 ₽/т с НДС</td><td>Дорожники, бетонные заводы, стройкомпании Калужской и Тульской областей</td></tr>
+    <tr><td>Глина керамзитовая и кирпичная</td><td class="r">380</td><td>Факт карьера: 304–312 ₽/т в 2025–2026 годах</td><td>Керамзитовые и кирпичные заводы</td></tr>
+    <tr><td>Отсев</td><td class="r">300</td><td>«Берники»: отсев 0–5 — 160, 0–10 — 320 ₽/т</td><td>ВК ХАРВЕСТЕРС (договор 2025 года на отсев), Эко-Нива и другие сельхозпокупатели</td></tr>
+    <tr><td>Известняк 70–120 для известковых заводов</td><td class="r">—</td><td>Письмо «Фельс Известь» от 24.11.2020: интерес к 15 тыс. т в месяц</td><td>Исторический след спроса, не текущий заказ. В модель не включён</td></tr>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h3>Конкуренты</h3>
+      <p><b>«Восточные Берники»</b> — крупнейший игрок рядом. В июле 2020 года отгрузили 244,9 тыс. т, за 11 месяцев 2020 года — 2,46 млн т. Широкий ассортимент, ж/д и авто, отгрузка круглосуточно. В 2026 году заявлена модернизация примерно на 1 млрд руб.</p>
+      <p><b>Пореченский и Рождественский карьеры</b> — известняковый щебень и минеральный порошок, промышленный сбыт.</p>
+      <p><b>Михайловский ГОК</b> не конкурент, а покупатель флюсового известняка.</p>
+    </div>
+    <div class="card"><h3>На чём выигрываем</h3>
+      <ul class="clean">
+        <li>Цена 1 150 ₽/т — на уровне или ниже прайса «Берников».</li>
+        <li>Два продукта из одного вскрытия: глина и щебень. Затраты на вскрышу окупаются дважды.</li>
+        <li>Отсев и известняковая мука — третий канал. Регистрация муки марки С действует с 15.06.2026 по 14.06.2036.</li>
+        <li>Короткая логистика: ДСК в 50 м от забоя, погрузка у весов.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note warn">Подписанных заказов на весь объём шестого месяца пока нет. Списки потенциальных покупателей — не заказы. Поэтому в ТЗ рост смен привязан к оплаченным заявкам (раздел 08, контрольные точки).</div>
+</section>
+
+<!-- 5 -->
+<section id="money">
+  <h2><span class="num">05</span>На что пойдут 50 млн рублей</h2>
+  <p class="sub">50 млн — лимит, а не обязательная сумма расходов. Модель считает потребность помесячно: 47,27 млн нужно на пуск, вторую весовую и оборотные деньги. Дальше карьер финансирует себя сам. Смета единая: модель и ТЗ сведены без двойного счёта.</p>
+  <div class="tbl"><table>
+    <tr><th>Назначение</th><th class="r">Млн ₽</th><th>Когда</th><th>Результат</th></tr>
+    <tr><td>Восстановление имеющейся техники</td><td class="r">9,47</td><td>М1</td><td>Экскаваторы, самосвалы, погрузчик и бульдозер в работе</td></tr>
+    <tr><td>Добычной экскаватор: аванс 30% и доставка</td><td class="r">8,10</td><td>М2</td><td>Надёжный экскаватор на каменном забое; остаток цены — лизинг</td></tr>
+    <tr><td>Весовая №1: аванс, площадка, запуск</td><td class="r">2,38</td><td>М1</td><td>Учёт каждой тонны</td></tr>
+    <tr><td>Весовая №2, площадки отгрузки, освещение для роста</td><td class="r">6,50</td><td>М3</td><td>Пропуск 120 тыс. т в месяц; без этого лишнюю глину не отгрузить</td></tr>
+    <tr><td>Электрозащита и освещение рабочих мест</td><td class="r">1,27</td><td>М1</td><td>Безопасная работа ДСК и второй смены</td></tr>
+    <tr><td>Связь и видеонаблюдение</td><td class="r">0,55</td><td>М1</td><td>Контроль въезда, весов, погрузки и топлива</td></tr>
+    <tr><td>Ремонтная зона, инструмент, оргтехника</td><td class="r">0,95</td><td>М1</td><td>Ремонт на месте, учёт и документы</td></tr>
+    <tr><td>Топливное хозяйство</td><td class="r">0,60</td><td>М1</td><td>Учёт выдачи топлива по машинам</td></tr>
+    <tr><td>Дороги и природоохранные мероприятия</td><td class="r">1,50</td><td>М1</td><td>Рабочие подъезды, водоотвод, чистый выезд</td></tr>
+    <tr><td>Аудит, проектирование, допуски, ПРГР 2026</td><td class="r">1,50</td><td>М1</td><td>Разрешение на расширенные объёмы</td></tr>
+    <tr><td>Бытовки и доставка арендного погрузчика</td><td class="r">0,45</td><td>М1–М2</td><td>Весовая, охрана, офис, ДСК, бытовки рабочих</td></tr>
+    <tr class="total"><td>Прямые пусковые платежи</td><td class="r">33,27</td><td>М1–М3</td><td></td></tr>
+    <tr><td>Непредвиденные расходы пуска, 15%</td><td class="r">4,99</td><td>М1–М3</td><td>Модель считает их потраченными полностью</td></tr>
+    <tr><td>Оборотные деньги и налоговый запас</td><td class="r">9,01</td><td>с запуска</td><td>Неснижаемый остаток 5 млн и налоги к уплате</td></tr>
+    <tr class="total"><td>Расчётная потребность</td><td class="r">47,27</td><td></td><td></td></tr>
+    <tr><td>Резерв до лимита</td><td class="r">2,73</td><td>по решению</td><td>Срочные платежи кредиторам до М7, если без них нельзя работать</td></tr>
+    <tr class="total"><td>Лимит инвестора</td><td class="r">50,00</td><td></td><td></td></tr>
+  </table></div>
+  <div class="grid3">
+    <div class="card"><h3>Транш 1 — 41,2 млн</h3><p>М1: ремонт, пуск, оборотные деньги до первых поступлений.</p></div>
+    <div class="card"><h3>Транш 2 — 3,6 млн</h3><p>М2: аванс экскаватора и переходящие платежи.</p></div>
+    <div class="card"><h3>Транш 3 — 2,5 млн</h3><p>М3: весовая №2. Дальше карьер работает на свои деньги.</p></div>
+  </div>
+  <p style="font-size:14.5px;color:var(--text-2)">Вскрыша, взрывы, топливо, зарплата и лизинг — текущие расходы. Они входят в помесячный план и оплачиваются оборотными деньгами и выручкой. Не входят в 50 млн: старые долги (гасятся из результата, раздел 13), перевод земель (второй этап), модернизация ДСК на 25 млн, ремонтный бокс, строительство заводов. Постатейно — в <a href="tz.html#budget">ТЗ, раздел 08</a>.</p>
+</section>
+
+<!-- 6 -->
+<section id="ramp">
+  <h2><span class="num">06</span>План выхода на мощность</h2>
+  <p class="sub">Шесть ступеней до 100 тыс. т, с седьмого месяца — 120 тыс. т в сезонный месяц. Каждая следующая ступень открывается, только когда подтверждена предыдущая: техника исправна, люди набраны, есть оплаченные заявки.</p>
+  <div class="tbl"><table>
+    <tr><th>Показатель</th><th class="r">М1</th><th class="r">М2</th><th class="r">М3</th><th class="r">М4</th><th class="r">М5</th><th class="r">М6</th><th class="r">М7–М12</th></tr>
+    <tr><td>Щебень, тыс. т</td><td class="r">8</td><td class="r">12</td><td class="r">16</td><td class="r">25</td><td class="r">35</td><td class="r">50</td><td class="r">50</td></tr>
+    <tr><td>Глина, тыс. т</td><td class="r">18,8</td><td class="r">24</td><td class="r">28</td><td class="r">32</td><td class="r">36</td><td class="r">40</td><td class="r">60</td></tr>
+    <tr><td>Отсев, тыс. т</td><td class="r">1</td><td class="r">2</td><td class="r">3</td><td class="r">5</td><td class="r">7</td><td class="r">10</td><td class="r">10</td></tr>
+    <tr><td>Численность, чел.</td><td class="r">27</td><td class="r">27</td><td class="r">31</td><td class="r">38</td><td class="r">45</td><td class="r">58</td><td class="r">~60</td></tr>
+    <tr><td>Продажи с НДС, млн ₽</td><td class="r">16,66</td><td class="r">23,52</td><td class="r">29,94</td><td class="r">42,41</td><td class="r">56,03</td><td class="r">75,70</td><td class="r">83,30</td></tr>
+    <tr><td>Денежный результат после лизинга, млн ₽</td><td class="r">−2,64</td><td class="r">3,88</td><td class="r">2,92</td><td class="r">6,04</td><td class="r">9,83</td><td class="r">18,37</td><td class="r"><b>19,2–21,5</b></td></tr>
+    <tr><td>Деньги на счёте на конец периода, млн ₽</td><td class="r">19,54</td><td class="r">20,52</td><td class="r">21,30</td><td class="r">30,96</td><td class="r">45,69</td><td class="r">71,16</td><td class="r">134,93</td></tr>
+    <tr><td>Из них свободно после налогового резерва, млн ₽</td><td class="r">13,77</td><td class="r">12,53</td><td class="r">9,69</td><td class="r">14,05</td><td class="r">21,22</td><td class="r">34,73</td><td class="r">85,41</td></tr>
+  </table></div>
+  <p style="font-size:14.5px;color:var(--text-2)">Деньги на счёте с М7 указаны уже после ежемесячного погашения старых долгов по 7,13 млн.</p>
+
+  <div class="chart" id="chart24">
+    <div class="ct">Денежный результат после лизинга по месяцам, млн ₽</div>
+    <div class="cs">Модель v3 под план директора (вторая весовая, 60 тыс. т глины, график долга), 24 месяца, до налога на прибыль. Наведите на столбец, чтобы увидеть значение.</div>
+    <svg viewBox="0 0 1000 300" role="img" aria-label="Денежный результат после лизинга за 24 месяца"></svg>
+    <div class="tip"></div>
+  </div>
+  <div class="grid3">
+    <div class="card"><h3>Год 1: 165,1 млн</h3><p>В среднем 13,8 млн в месяц, с учётом запуска: первые пять месяцев идёт выход на мощность.</p></div>
+    <div class="card"><h3>Год 2: 200,0 млн</h3><p>В среднем <b>16,7 млн в месяц</b>, выше цели 15 млн. Выручка без НДС — 680,8 млн, рентабельность около 29%.</p></div>
+    <div class="card"><h3>Зима — провал</h3><p>В М15–М16 (декабрь–январь второго года) результат 1,6–4,8 млн: продажи щебня сезонные. Зимой — вскрыша, взрывы и ремонт.</p></div>
+  </div>
+  <div class="note warn"><b>Сезон первого года.</b> В модели М3–М6 приходятся на декабрь–март, и зимнего спада в первый год модель не учитывает. При старте осенью первые 2–3 месяца уходят на ремонт, вскрышу, взрывы и запас продукции, а к апрелю карьер выходит на полные объёмы. Если зимние продажи окажутся ниже плана, рост тормозится, а лишние траты не производятся.</div>
+</section>
+
+<!-- 7 -->
+<section id="profit">
+  <h2><span class="num">07</span>Как выходим на 15 млн рублей в среднем за год</h2>
+  <p class="sub">Цель — не меньше 180 млн в год денежного результата после лизинга, до налога на прибыль. Все варианты ниже посчитаны той же моделью v3: налоги, НДПИ, персонал, ремонт, лизинг и деньги — её формулами. Проверки модели — без ошибок.</p>
+  <div class="tbl"><table>
+    <tr><th>Вариант</th><th class="r">Год 1, млн</th><th class="r">Год 2, млн</th><th class="r">Год 2 в месяц</th><th>Цель ≥15</th></tr>
+    <tr><td>Исходная модель: одна весовая, 40 тыс. т глины, лишняя глина на склад</td><td class="r">116,8</td><td class="r">84,7</td><td class="r">7,1</td><td><span class="pill no">нет</span></td></tr>
+    <tr><td><b>План директора:</b> весовая №2, вся вынутая глина продаётся — 60 тыс. т/мес по 380 ₽/т, отсев 10 тыс. т</td><td class="r">165,1</td><td class="r">200,0</td><td class="r"><b>16,7</b></td><td><span class="pill ok">да</span></td></tr>
+    <tr><td>То же, глина по 340 ₽/т</td><td class="r">148,4</td><td class="r">179,8</td><td class="r">15,0</td><td><span class="pill chk">на границе</span></td></tr>
+    <tr><td>Глина по 310 ₽/т (факт 2025–2026), зимой щебень 40 тыс. т/мес</td><td class="r">135,9</td><td class="r">176,6</td><td class="r">14,7</td><td><span class="pill chk">почти</span></td></tr>
+    <tr><td>Рыночные цены соседей: щебень 1 050, глина 310, отсев 250 ₽/т (стресс-тест)</td><td class="r">98,0</td><td class="r">123,4</td><td class="r">10,3</td><td><span class="pill no">нет</span></td></tr>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h3>Почему план работает</h3>
+      <ul class="clean">
+        <li><b>Глина уже оплачена.</b> Чтобы открыть камень под 50 тыс. т щебня, вынимают около 60 тыс. т глины в месяц. Исходная модель продавала только 40 тыс. т, остальное везла на склад: деньги уходили, выручки не было.</li>
+        <li><b>Вторая весовая за 4 млн</b> снимает главное узкое место: одна весовая пропускает около 100 тыс. т в месяц.</li>
+        <li><b>Спрос на глину</b> подтверждает директор: керамзитовые и кирпичные заводы. Договоры на 60 тыс. т в месяц — условие этапа 4 ТЗ.</li>
+      </ul>
+    </div>
+    <div class="card"><h3>Условия</h3>
+      <ul class="clean">
+        <li><b>ПРГР 2026</b> на расширенные объёмы: глина около 400 тыс. м³ в год против ориентира 120 тыс. м³ в ПРГР 2025. Подача — М1, согласование — до М4.</li>
+        <li><b>Цена глины не ниже 340 ₽/т.</b> Ниже — только с согласия инвестора и с зимней отгрузкой щебня.</li>
+        <li><b>Выход щебня 52,5%</b> подтверждается контрольными сменами в М1.</li>
+        <li><b>Оплата в месяце отгрузки.</b> Отсрочка половины оплат добавляет к потребности около 12 млн.</li>
+      </ul>
+    </div>
+  </div>
+  <p><b>Доказательство на примере соседей.</b> Пореченский карьер в 26 км от Зудны в 2025 году получил 746,9 млн выручки и 32,7% прибыли до налога при 85 работниках, «Восточные Берники» — 23,4%. Масштаб и рентабельность плана рынок подтверждает. Не подтверждены рынком цена и объём глины: их директор подтверждает договорами. Подробно — в <a href="neighbors.html">сравнении с соседними карьерами</a>.</p>
+  <p>Резервы роста, которые в расчёт не включены: мука марки С вместо части отсева, щебень М800 по более высокой цене, известняк 70–120 для известковых заводов, зимняя отгрузка щебня. Модернизация ДСК до 1 500 т за смену без роста сбыта, по расчёту модели, результат ухудшает. Поэтому её в плане нет.</p>
+  <div class="note">После налога на прибыль 25% результат второго года — около 150 млн, то есть 12,5 млн в месяц. Цель 15 млн задана до налога на прибыль: так решил собственник 12.10.2026.</div>
+</section>
+
+<!-- 8 -->
+<section id="tz">
+  <h2><span class="num">08</span>Техническое задание генерального директора</h2>
+  <p class="sub">У директора есть не только бизнес-план, но и рабочее ТЗ: задачи по этапам с ответственными, бюджетом и критериями приёмки, единая смета, нормативы, график долга, отчётность и правила остановки.</p>
+  <p><a href="tz.html"><b>Открыть ТЗ «Вывод карьера на мощность», редакция 3 от 12.10.2026 →</b></a></p>
+
+  <h3>Технология: три участка в потоке</h3>
+  <div class="flow">
+    <div class="step"><b>Участок А</b><div class="t">Вскрытие</div><p>Подрядчик снимает суглинки. Блок около 100 × 100 м — примерно неделя. Затем бригада переходит на следующий блок.</p></div>
+    <div class="step"><b>Участок Б</b><div class="t">Глина</div><p>Экскаватор грузит глину сразу в машины покупателей, через весы. 60 тыс. т в месяц с М7.</p></div>
+    <div class="step"><b>Участок В</b><div class="t">Камень → ДСК</div><p>Бурение и взрыв: 17 тыс. м³ в целике ≈ 42,5 тыс. т горной массы за 2,07 млн ₽. ДСК в 50 м: 1 000 т щебня за смену, 2 смены.</p></div>
+  </div>
+
+  <h3>Этапы</h3>
+  <div class="gate"><div class="m">Этап 0<small>до транша</small></div><div class="b"><p>Реестр долгов 128,3 млн и график их погашения, банковские выписки, налоговая сверка, дефектовка техники, корпоративный договор, заявки покупателей на М1–М3.</p></div></div>
+  <div class="gate"><div class="m">М1<small>запуск</small></div><div class="b"><p>Ремонт на 9,47 млн, весовая №1, связь, 8 камер, бытовки, дороги, подача ПРГР 2026, набор 27 человек, первый взрыв, три контрольные смены.</p><p class="cond">Переход: техника испытана, выход щебня подтверждён весами, ежедневная сверка работает.</p></div></div>
+  <div class="gate"><div class="m">М2–М3<small>убрать остановки</small></div><div class="b"><p>Экскаватор на камне, Hitachi 450, бульдозер, 3 самосвала, малый погрузчик, <b>весовая №2</b>, менеджеры по щебню и глине.</p><p class="cond">Переход: ДСК не ждёт камень, очереди на весах нет, оплачено не менее 90% отгрузок.</p></div></div>
+  <div class="gate"><div class="m">М4<small>18 часов</small></div><div class="b"><p>18 часов работы ДСК и отгрузки, 38 человек. ПРГР 2026 согласован.</p></div></div>
+  <div class="gate"><div class="m">М5–М6<small>две смены</small></div><div class="b"><p>ДСК 24 часа, 58 человек, 100 тыс. т в М6. Договоры на 60 тыс. т глины в месяц с М7.</p></div></div>
+  <div class="gate"><div class="m">М7+<small>устойчиво</small></div><div class="b"><p>120 тыс. т в сезонный месяц, погашение долга 7,13 млн в месяц, зимой — вскрыша и взрывы впрок.</p><p class="cond">Приёмка: средний результат за 12 месяцев ≥15 млн в месяц.</p></div></div>
+  <div class="note warn"><b>Правило остановки.</b> Не хватает людей, сырья, исправной техники, разрешённого объёма или оплаченных заказов — следующий шаг откладывается. Производство на склад без плана продаж выручкой не считается.</div>
+</section>
+<!-- 9 -->
+<section id="docs">
+  <h2><span class="num">09</span>Разрешительная документация</h2>
+  <p class="sub">Найдено 52 документа по карьеру и компании. Ниже — основные. Справки по каждому документу открыты в <a href="https://stels935-arch.github.io/quarry-kaluga-model/investor-65m-2026-10-04/#dossier" target="_blank" rel="noopener">программе карьера, раздел «Разрешительные документы»</a>. Оригиналы с подписями и персональными данными инвестор получает в комнате данных.</p>
+  <div class="tbl"><table>
+    <tr><th>Документ</th><th>Период</th><th>Статус</th></tr>
+    <tr><td><b>Лицензия КЛЖ 80065 ТЭ</b> с приложениями, Марухтинский-2</td><td>01.09.2009 – 01.01.2029</td><td><span class="pill ok">есть копия</span> сверить с реестром</td></tr>
+    <tr><td>Горноотводный акт; регистрация горного отвода в Ростехнадзоре</td><td>2012</td><td><span class="pill ok">есть копии</span></td></tr>
+    <tr><td>Технический проект разработки, корректировка 2015 года, проект рекультивации</td><td>2015</td><td><span class="pill ok">есть копии</span></td></tr>
+    <tr><td>Проект ДСК; приказ №910 об изменениях ПДСУ и потерях при переработке</td><td>—</td><td><span class="pill ok">есть копии</span></td></tr>
+    <tr><td>План развития горных работ (ПРГР) 2025 — протокол согласования</td><td>2025</td><td><span class="pill ok">есть копия</span></td></tr>
+    <tr><td>ПРГР 2026 — заявление</td><td>2026</td><td><span class="pill chk">согласование не подтверждено</span></td></tr>
+    <tr><td>Регистрация опасного производственного объекта (ОПО)</td><td>—</td><td><span class="pill ok">есть копия</span></td></tr>
+    <tr><td>Страхование опасного объекта</td><td>17.04.2026 – 16.04.2027</td><td><span class="pill ok">есть полис</span></td></tr>
+    <tr><td>Формы 5-ГР за 2025 год: известняк и керамзитовая глина</td><td>2025</td><td><span class="pill ok">есть копии</span></td></tr>
+    <tr><td>Протокол ЭКЗ №109 (известняк), ТКЗ №196 (керамзитовая глина), геологический отчёт 2010 года</td><td>2010–2014</td><td><span class="pill ok">есть копии</span></td></tr>
+    <tr><td>Сертификат на керамзитовую глину; экспертное заключение №1665</td><td>13.07.2026 – 12.07.2029</td><td><span class="pill ok">есть копии</span></td></tr>
+    <tr><td>Протоколы ЦСК №141/7–9: щебень 5–20 М800, 20–40 и 40–70 М600</td><td>21.05.2025</td><td><span class="pill ok">положительные</span></td></tr>
+    <tr><td>Протоколы №352–354: щебень</td><td>13.02.2025</td><td><span class="pill chk">замечания по зерновому составу</span></td></tr>
+    <tr><td>Известняковая мука марки С: регистрация, экспертизы №19/887 и 19/888, радиология №308</td><td>15.06.2026 – 14.06.2036</td><td><span class="pill ok">есть копии</span> заявитель — ВК ХАРВЕСТЕРС</td></tr>
+    <tr><td>Устав (2018), выписка ЕГРЮЛ (10.09.2026), список участников (31.07.2026), полномочия директора (протокол №9 от 30.08.2024)</td><td>—</td><td><span class="pill ok">есть копии</span></td></tr>
+    <tr><td>Выписка ЕГРН по участкам</td><td>05.2026</td><td><span class="pill ok">есть копия</span></td></tr>
+    <tr><td>Полная бухгалтерская отчётность и сверка обязательств</td><td>2024–2026</td><td><span class="pill no">не представлено</span></td></tr>
+    <tr><td>Налоговые декларации и сверка с бюджетом</td><td>—</td><td><span class="pill no">не представлено</span></td></tr>
+    <tr><td>Технические условия на газ</td><td>—</td><td><span class="pill no">нет</span> только схема отводов</td></tr>
+  </table></div>
+  <div class="note">Наличие копии не доказывает, что разрешение действует сегодня и не приостановлено. Актуальность лицензии, ПРГР 2026 и отсутствие обременений проверяет юрист инвестора до первого транша (раздел 12).</div>
+</section>
+
+<!-- 10 -->
+<section id="media">
+  <h2><span class="num">10</span>Фото и видео с объекта</h2>
+  <p class="sub">Снимки и ролики из подборки карьера, без лиц и звука. Дата съёмки не установлена. Исправность техники они не подтверждают: её подтверждает дефектовка и испытание под нагрузкой. Полная подборка — в <a href="https://stels935-arch.github.io/quarry-kaluga-model/investor-65m-2026-10-04/#media" target="_blank" rel="noopener">программе карьера</a>.</p>
+  <div class="gallery" id="gallery"></div>
+  <div class="videos" id="videos"></div>
+</section>
+
+<!-- 11 -->
+<section id="growth">
+  <h2><span class="num">11</span>Развитие после выхода на мощность</h2>
+  <p class="sub">Эти направления не входят в 50 млн и в расчёт результата. Это следующий этап, под который директор готовит решения в первые шесть месяцев.</p>
+  <div class="grid3">
+    <div class="card"><h3>Мука марки С</h3><p>Отдельный продукт с паспортом партии вместо части отсева. План: пробная партия в М2, к М6 — 4,5 тыс. т продаж в месяц. Сначала права через регистранта, качество и месячные заявки.</p></div>
+    <div class="card"><h3>Свой известковый завод</h3><p>Отдельный проект. М1–М6: пробы и опытный обжиг, запросы покупателям, технические условия на газ и электричество, полная смета. Решение «строить, доработать или отложить» — только по подтверждённой экономике и на отдельные деньги.</p></div>
+    <div class="card"><h3>Новые участки 5–8</h3><p>162,3 га сельхозземель. Подготовка участков №3–8 к лицензированию, разведка и перевод земель по регламенту занимают от 4 до 7 лет (дорожная карта в файле «1 СНЕ.xlsx»). Это задел на долгий срок, текущие запасы для плана не нужны.</p></div>
+  </div>
+  <p style="margin-top:12px">Модернизация ДСК до 1 500 т за смену (около 25 млн руб.) — тоже отдельный проект. К нему переходят, только когда ДСК стабильно даёт 1 000 т за смену и есть подтверждённый сбыт сверх 50 тыс. т щебня.</p>
+</section>
+
+<!-- 12 -->
+<section id="risks">
+  <h2><span class="num">12</span>Риски и как они закрываются</h2>
+  <div class="tbl"><table>
+    <tr><th>Риск</th><th>Что делаем</th><th>Когда</th></tr>
+    <tr><td><b>Долги компании 128,3 млн</b> (по прежнему бизнес-плану; дебиторская задолженность 51,0 млн, запасы 58,7 млн) — не подтверждены реестром</td><td>Реестр кредиторов с актами сверки до транша; погашение из результата по 7,13 млн в месяц с М7 по М24 (решение собственника 12.10.2026); очерёдность утверждает инвестор</td><td>до транша 1, далее М7–М24</td></tr>
+    <tr><td><b>Разрешённые объёмы.</b> ПРГР 2025 — ориентир 120 тыс. м³ глины в год, а план требует около 400 тыс. м³; ПРГР 2026 подан, но не согласован; лицензию нужно сверить с реестром</td><td>Проект ПРГР 2026 на расширенные объёмы в М1, согласование до М4; до согласования глина — в разрешённом объёме</td><td>М1–М4</td></tr>
+    <tr><td><b>Сбыт щебня.</b> В 2025 году было 2 тыс. т в месяц, нужно 50 тыс. т</td><td>Менеджер по щебню, прайс на уровне «Берников», заявки до каждой ступени роста</td><td>М1–М6</td></tr>
+    <tr><td><b>Сбыт глины.</b> Сейчас 16–17 тыс. т в месяц, план — 40–59 тыс. т</td><td>Менеджер по глине, договоры с керамзитовыми и кирпичными заводами</td><td>М1–М6</td></tr>
+    <tr><td><b>Производительность ДСК</b> не доказана: в документах от 83 до 714 т в час</td><td>Промышленный тест с весами; модернизация — только после подтверждения 1 000 т за смену</td><td>М1</td></tr>
+    <tr><td><b>Выход щебня 52,5%</b> — гипотеза</td><td>Три контрольные смены, материальный баланс по каждому взрыву</td><td>М1</td></tr>
+    <tr><td><b>Сезонность.</b> Зимой спрос падает</td><td>Зимой — вскрыша, взрывы и запас; резерв 7,33 млн; рост тормозится без заказов</td><td>постоянно</td></tr>
+    <tr><td><b>Отсрочка оплат покупателями</b></td><td>Предоплата или оплата в месяце отгрузки; в июле 2020 года у «Берников» 90,8% тоннажа шло по предоплате</td><td>постоянно</td></tr>
+    <tr><td><b>Поломки техники</b></td><td>Ремонт 9,47 млн, склад запчастей, подменная машина, журнал обслуживания</td><td>М1–М3</td></tr>
+    <tr><td><b>Двойные расходы</b> по разным сметам</td><td>Единый календарь платежей: каждой покупке — одна строка бюджета</td><td>до транша 1</td></tr>
+  </table></div>
+</section>
+
+<!-- 13 -->
+<section id="investor">
+  <h2><span class="num">13</span>Что получает инвестор</h2>
+  <p class="sub">По плану к концу 24-го месяца старые долги 128,3 млн погашены, а на счёте проекта 197,9 млн. После налогов, сезонного запаса 15 млн, будущих лизинговых платежей и неснижаемого остатка 5 млн свободно 109,8 млн. Варианты ниже — предложения для переговоров, а не согласованные условия.</p>
+  <div class="grid2">
+    <div class="card"><h3>Вариант А: приоритетный возврат + доля</h3>
+      <div class="tbl" style="margin:8px 0 0"><table>
+        <tr><td>Возврат вложенного капитала</td><td class="r">47,27 млн</td></tr>
+        <tr><td>25% остатка денег после возврата</td><td class="r">15,63 млн</td></tr>
+        <tr class="total"><td>Выплата к М24</td><td class="r">62,90 млн</td></tr>
+        <tr><td>Доход сверх капитала</td><td class="r">+33%</td></tr>
+      </table></div>
+    </div>
+    <div class="card"><h3>Вариант Б: 15% годовых + доля</h3>
+      <div class="tbl" style="margin:8px 0 0"><table>
+        <tr><td>Возврат капитала</td><td class="r">47,27 млн</td></tr>
+        <tr><td>Проценты 15% годовых</td><td class="r">14,07 млн</td></tr>
+        <tr><td>25% остатка после капитала и процентов</td><td class="r">12,12 млн</td></tr>
+        <tr class="total"><td>Выплата к М24</td><td class="r">73,46 млн</td></tr>
+        <tr><td>Доход сверх капитала</td><td class="r">+55%</td></tr>
+      </table></div>
+    </div>
+  </div>
+  <p style="font-size:14.5px;color:var(--text-2)">Расчёт модели без промежуточных выплат; это не IRR и не гарантия. Налоги инвестора не учтены. Права на долю, приоритет возврата и обеспечение фиксируются договором.</p>
+
+  <h3>Погашение старых долгов</h3>
+  <p>Собственник решил 12.10.2026: обязательства компании 128,3 млн (сумма из прежнего бизнес-плана, подтверждается реестром до транша) гасятся из денежного результата по мере его появления — по 7,13 млн в месяц с М7 по М24. Модель проверила график: в каждом месяце сохраняются налоговый резерв и неснижаемый остаток 5 млн, кассовых разрывов нет. По прежнему плану дебиторская задолженность — 51,0 млн, запасы — 58,7 млн. Их тоже подтверждает бухгалтерия.</p>
+
+  <h3>Стоимость бизнеса</h3>
+  <p>Есть проект предварительного договора купли-продажи 100% долей компании, владеющей карьером: базовая цена — 700 млн руб. без НДС, основной договор — до 30.12.2026. Цена уменьшается на превышение кредиторской задолженности над согласованным пределом. Это проект: он не подписан, поля не заполнены. В финансовой модели заложен вариант для переговоров: при продаже бизнеса за 600–700 млн инвестору причитается 25% цены, то есть 150–175 млн, включая возврат капитала. Продажа в денежный поток проекта не включена.</p>
+
+  <h3>Контроль инвестора</h3>
+  <ul class="clean">
+    <li>Транши — под этапы ТЗ, а не всей суммой сразу.</li>
+    <li>Ежедневный отчёт директора и еженедельная сводка с банковскими выписками.</li>
+    <li>Доступ к учёту (1С), счетам и записям весов и камер.</li>
+    <li>Лимиты платежей; без согласия инвестора — никаких новых долгов, залогов и сделок с аффилированными лицами.</li>
+    <li>Налоговый резерв и неснижаемый остаток 5 млн не распределяются.</li>
+  </ul>
+
+  <h3>Что подтвердить до первого транша</h3>
+  <ul class="check">
+    <li>Состав участников, схема входа инвестора, корпоративный договор и обеспечение.</li>
+    <li>Реестр обязательств на 128,3 млн с актами сверки, очерёдность и график погашения; банковские выписки за 12 месяцев.</li>
+    <li>Действие лицензии КЛЖ 80065 ТЭ по реестру, ОПО и страхование; заявка на ПРГР 2026 под расширенные объёмы.</li>
+    <li>Налоговая сверка: НДС 22%, НДПИ, налог на прибыль.</li>
+    <li>Дефектные ведомости и минимум два предложения по крупным ремонтам; паспорт ДСК.</li>
+    <li>Договор БВР (121,83 ₽/м³ с НДС) и график вскрыши на первые три месяца.</li>
+    <li>Заявки покупателей на М1–М3; письма керамзитовых и кирпичных заводов о годовом объёме глины.</li>
+  </ul>
+</section>
+<!-- 14 -->
+<section id="sources">
+  <h2><span class="num">14</span>Источники</h2>
+  <p class="sub">Все цифры взяты из материалов карьера. Исходники лежат на сетевом диске РесурсПроекта: <code>\\172.16.15.9\Doc3\Тендеры 2026\3-й квартал\165_Карьер в Калуге</code>.</p>
+  <div class="tbl"><table>
+    <tr><th>Что</th><th>Файл</th></tr>
+    <tr><td>ТЗ директора, редакция 3 (единая смета, этапы, график долга)</td><td><a href="tz.html">tz.html</a></td></tr>
+    <tr><td>Сравнение с соседними карьерами: отчётность, объёмы, цены</td><td><a href="neighbors.html">neighbors.html</a></td></tr>
+    <tr><td>Финансовая модель v3: помесячный план, затраты, деньги, налоги, расчёт для инвестора; пересчитана 12.10.2026 тем же движком формул (сценарий: весовая №2 в М3, глина 60 тыс. т/мес с М7 по 380 ₽/т, отсев 10 тыс. т, долг 7,13 млн/мес с М7)</td><td><a href="https://stels935-arch.github.io/quarry-kaluga-model/investor-65m-2026-10-04/" target="_blank" rel="noopener">Программа карьера, версия для инвестора от 04.10.2026</a></td></tr>
+    <tr><td>Назначение 50 млн, платежи и взносы за 6 месяцев</td><td><code>90_AI_Drafts\Карьер_на_что_нужны_50_млн_2026-10-04.xlsx</code></td></tr>
+    <tr><td>ТЗ: техника и дорожная карта, редакция 2</td><td><code>ТЗ_Техника_и_дорожная_карта_v2_2026-10-06.docx</code></td></tr>
+    <tr><td>Развитие: известковый завод, конкуренты, мука марки С, документы</td><td><code>90_AI_Drafts\Дополнение_развитие_и_документы_2026-10-12\development-plan-2026-10-12.docx</code></td></tr>
+    <tr><td>Описание карьера, пояснения директора, балансовые запасы</td><td><code>Описание карьера.docx</code>, <code>Пояснения от Директора.docx</code>, <code>Балансовые запасы.docx</code></td></tr>
+    <tr><td>Ответы директора на запрос (11.09.2026)</td><td><code>Инвест-проект\Инвест-проект\Запрос_директору_…_(с ответами на 11.09).docx</code></td></tr>
+    <tr><td>Самопроверка модели</td><td><code>90_AI_Drafts\Расширенный_инвестплан_2026-09-16\03_Критика_и_корректировки_2026-09-16.docx</code></td></tr>
+    <tr><td>Дорожная карта лицензирования участков 3–8</td><td><code>1 СНЕ.xlsx</code></td></tr>
+    <tr><td>Конкуренты</td><td>папки «Конкуренты карьер в Берники…», «Конкуренты Карьер Михайловского ГОК…»; сайт berniki.ru на 12.10.2026</td></tr>
+  </table></div>
+</section>
+
+<footer>
+  Бизнес-план развития карьера «Зудна» · ООО СП «Агротехпром» · проект от 12.10.2026 для согласования с генеральным директором и проверки ответственным сотрудником. Финансовые показатели — финансовая модель v3, пересчитанная её движком формул 12.10.2026 под план директора (вторая весовая, 60 тыс. т глины, погашение долга); это расчёт, а не гарантия результата. Рабочее ТЗ и сравнение с соседними карьерами — отдельные файлы в этой же папке. Документ не является офертой. Подготовлен ООО «РЕСУРСПРОЕКТ».
+</footer>
+</main>
+
+<script>
+(function(){
+  // Тема
+  var root=document.documentElement, btn=document.getElementById('theme');
+  try{var t=localStorage.getItem('bp-theme'); if(t) root.setAttribute('data-theme',t);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    var next=dark?'light':'dark'; root.setAttribute('data-theme',next);
+    try{localStorage.setItem('bp-theme',next);}catch(e){}
+  });
+
+  // График: денежный результат после лизинга, М1–М24 (модель v3, лист «01 Итог», строка 16)
+  var vals=[-2.64,3.88,2.92,6.04,9.83,18.37,21.37,19.20,21.53,21.53,21.53,21.53,18.94,14.61,4.78,1.59,9.99,19.68,19.88,22.21,22.67,22.67,20.34,22.67];
+  var cal=['окт 26','ноя 26','дек 26','янв 27','фев 27','мар 27','апр 27','май 27','июн 27','июл 27','авг 27','сен 27','окт 27','ноя 27','дек 27','янв 28','фев 28','мар 28','апр 28','май 28','июн 28','июл 28','авг 28','сен 28'];
+  var box=document.getElementById('chart24'), svg=box.querySelector('svg'), tip=box.querySelector('.tip');
+  var W=1000,H=300,L=40,R=10,T=14,B=34,min=-5,max=25;
+  var y=function(v){return T+(max-v)/(max-min)*(H-T-B);};
+  var NS='http://www.w3.org/2000/svg', s='';
+  [-5,0,5,10,15,20,25].forEach(function(g){
+    s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(g)+'" y2="'+y(g)+'" stroke="var(--grid)" stroke-width="'+(g===0?1.5:1)+'"'+(g===0?' style="stroke:var(--line-2)"':'')+'/>';
+    s+='<text x="'+(L-6)+'" y="'+(y(g)+4)+'" text-anchor="end">'+g+'</text>';
+  });
+  // линия цели 15 млн
+  s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(15)+'" y2="'+y(15)+'" stroke="var(--text-2)" stroke-dasharray="4 4" stroke-width="1"/>';
+  s+='<text x="'+(L+6)+'" y="'+(y(15)-5)+'" text-anchor="start" style="fill:var(--text)">цель 15 млн</text>';
+  var n=vals.length, slot=(W-L-R)/n, bw=Math.min(28,slot-6);
+  vals.forEach(function(v,i){
+    var x=L+i*slot+(slot-bw)/2, y0=y(0), yv=y(v), top=Math.min(y0,yv), h=Math.max(1,Math.abs(yv-y0));
+    var r=Math.min(4,h/2), col=v<0?'var(--bar-neg)':'var(--bar)';
+    var d;
+    if(v>=0){d='M'+x+','+(top+h)+'V'+(top+r)+'Q'+x+','+top+' '+(x+r)+','+top+'H'+(x+bw-r)+'Q'+(x+bw)+','+top+' '+(x+bw)+','+(top+r)+'V'+(top+h)+'Z';}
+    else{d='M'+x+','+top+'V'+(top+h-r)+'Q'+x+','+(top+h)+' '+(x+r)+','+(top+h)+'H'+(x+bw-r)+'Q'+(x+bw)+','+(top+h)+' '+(x+bw)+','+(top+h-r)+'V'+top+'Z';}
+    s+='<path d="'+d+'" fill="'+col+'"/>';
+    s+='<rect class="hit" data-i="'+i+'" x="'+(L+i*slot)+'" y="'+T+'" width="'+slot+'" height="'+(H-T-B)+'" fill="transparent"/>';
+    if(i%2===0||n<=12) s+='<text x="'+(x+bw/2)+'" y="'+(H-B+16)+'" text-anchor="middle">М'+(i+1)+'</text>';
+    if(i===5) s+='<text x="'+(x+bw/2)+'" y="'+(yv-6)+'" text-anchor="middle" style="fill:var(--text);font-weight:600">18,4</text>';
+  });
+  svg.innerHTML=s;
+  svg.addEventListener('mousemove',function(e){
+    var t=e.target; if(!t.classList||!t.classList.contains('hit')){tip.style.opacity=0;return;}
+    var i=+t.getAttribute('data-i'), rb=box.getBoundingClientRect();
+    tip.textContent='М'+(i+1)+' ('+cal[i]+'): '+vals[i].toFixed(2).replace('.',',')+' млн ₽';
+    tip.style.left=(e.clientX-rb.left)+'px'; tip.style.top=(e.clientY-rb.top)+'px'; tip.style.opacity=1;
+  });
+  svg.addEventListener('mouseleave',function(){tip.style.opacity=0;});
+
+  // Фото и видео — опубликованная подборка программы карьера
+  var base='https://stels935-arch.github.io/quarry-kaluga-model/investor-65m-2026-10-04/assets/media/';
+  var photos=[['photo-pdf-1.jpg','Каменный забой и известняковая горная масса'],['photo-pdf-7.jpg','Панорама рабочего глиняного забоя'],['photo-pdf-3.jpg','Уступ товарной глины'],['photo-pdf-4.jpg','Добыча глины: экскаватор и самосвал'],['photo-pdf-2.jpg','Глиняный забой и рабочая дорога'],['photo-pdf-6.png','Глиняный уступ — крупный план'],['photo-Q001.jpg','Первичный узел ДСК'],['photo-Q002.jpg','ДСК и склады продукции'],['photo-Q016.jpg','Конвейеры и сортировочный узел'],['photo-Q080.jpg','Конус щебня под конвейером'],['photo-pdf-5.jpg','ДСК и склады готовой продукции'],['photo-Q018.jpg','Самосвал на дороге к забою']];
+  var videos=[['media-2b8f25674c94f354.mp4','Карьерная выработка, экскаватор и самосвалы'],['media-a3104c51c49cb5e5.mp4','ДСК, конвейеры и площадка продукции'],['media-281ee1e7a791a500.mp4','Щебень на складе'],['media-93b0f1519520d081.mp4','Подача горной массы и работа узлов ДСК'],['media-69b408c81740238d.mp4','Общий вид ДСК и складских конусов'],['media-4f833d0b2ed02cb4.mp4','Щебень на складе — короткий ролик']];
+  var esc=function(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+  document.getElementById('gallery').innerHTML=photos.map(function(p){return '<figure><a href="'+base+p[0]+'" target="_blank" rel="noopener"><img src="'+base+p[0]+'" alt="'+esc(p[1])+'" loading="lazy"></a><figcaption>'+esc(p[1])+'</figcaption></figure>';}).join('');
+  document.getElementById('videos').innerHTML=videos.map(function(v){return '<figure><video controls muted playsinline preload="metadata" src="'+base+v[0]+'#t=0.5"></video><figcaption>'+esc(v[1])+'</figcaption></figure>';}).join('');
+})();
+</script>
+</body>
+</html>
