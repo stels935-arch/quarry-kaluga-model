@@ -69,7 +69,7 @@
 
 </style>
 <style>.doc-embed-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:0 0 12px}.doc-embed-bar h1{margin:0;font-size:24px}.doc-embed-bar a{font-size:14px}.doc-embed{width:100%;height:calc(100vh - 140px);min-height:640px;border:1px solid rgba(127,127,127,.25);border-radius:12px;background:#fff}</style>
-<script>window.__docFrame=function(k){var d={investor:['Бизнес-план развития карьера на 50 млн','docs/business-plan.html'],roadmap:['ТЗ генерального директора: вывод карьера на мощность','docs/tz.html'],competitors:['Реально ли это? Сравнение с соседними карьерами','docs/neighbors.html']}[k];return '<div class="doc-embed-bar"><h1>'+d[0]+'</h1><a href="'+d[1]+'" target="_blank" rel="noopener">Открыть отдельно ↗</a></div><iframe class="doc-embed" src="'+d[1]+'" title="'+d[0]+'" loading="lazy"></iframe>';};</script></head>
+<script>window.__assetBase="../investor-65m-2026-10-04/assets/";window.__docFrame=function(k){var d={investor:['Бизнес-план развития карьера на 50 млн','docs/business-plan.html'],roadmap:['ТЗ генерального директора: вывод карьера на мощность','docs/tz.html'],competitors:['Реально ли это? Сравнение с соседними карьерами','docs/neighbors.html']}[k];return '<div class="doc-embed-bar"><h1>'+d[0]+'</h1><a href="'+d[1]+'" target="_blank" rel="noopener">Открыть отдельно ↗</a></div><iframe class="doc-embed" src="'+d[1]+'" title="'+d[0]+'" loading="lazy"></iframe>';};</script></head>
 <body>
   <a class="skip" href="#main">Перейти к расчетам</a>
   <aside class="sidebar">
@@ -886,7 +886,7 @@ return heading('Полный расчет','Все листы и формулы 
   function fileDoc(f){return (D.documents||[]).find(d=>d.id===f.id||d.fileId===f.id);}
   function safePath(p){return /^(?:javascript|data|https?):/i.test(p||'')?'#':String(p||'').replace(/\\/g,'/');}
   // Attachment paths are confined to this offline package, never remote URLs.
-  function attachmentPath(p){const s=String(p||'').replace(/\\/g,'/');if(!s||/^(?:\/|[a-z][a-z\d+.-]*:)/i.test(s)||/[\u0000-\u001f]/.test(s)||s.split('/').some(v=>v==='..'||!v))return '';return s.split('/').map(encodeURIComponent).join('/');}
+  function attachmentPath(p){const __B=window.__assetBase||'';if(__B&&String(p||'').startsWith(__B))return __B+attachmentPath(String(p).slice(__B.length));const s=String(p||'').replace(/\\/g,'/');if(!s||/^(?:\/|[a-z][a-z\d+.-]*:)/i.test(s)||/[\u0000-\u001f]/.test(s)||s.split('/').some(v=>v==='..'||!v))return '';return s.split('/').map(encodeURIComponent).join('/');}
   const mediaEntries=()=>Array.isArray(D.media?.entries)?D.media.entries.filter(e=>e.kind==='photo'||e.kind==='video'):[];
   const permitEntries=()=>Array.isArray(D.permits?.entries)?D.permits.entries:[];
   const permitCategories={license:'Лицензии',permit:'Разрешительные документы',equipment:'Оборудование и паспорта',quality:'Качество продукции',geology:'Геология и запасы',land:'Земля и инфраструктура'};
